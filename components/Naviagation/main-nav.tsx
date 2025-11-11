@@ -8,37 +8,48 @@ import {
   Link as ChakraLink,
   Menu,
   Portal,
+  ClientOnly,
+  Skeleton,
+  IconButton,
+  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 
-import { LuChevronDown } from "react-icons/lu";
+import { LuChevronDown, LuMoon, LuSun } from "react-icons/lu";
 import { useState } from "react";
 import MobileNav from "./mobile-nav";
+import { useColorMode } from "../ui/color-mode";
 
 const MainNav = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const { toggleColorMode, colorMode } = useColorMode();
 
   return (
     <Flex
-      py={3}
+      py={4}
       justify="space-between"
       px={{ base: 4, md: 10 }}
       align="center"
-      bg="white"
       boxShadow="sm"
       wrap="wrap"
+      bg={colorMode === "light" ? "white" : "black"}
+      position="fixed"
+      top={0}
+      left={0}
+      right={0}
+      zIndex={5}
     >
       {/* Logo */}
       <ChakraLink as={NextLink} href="/">
-        <Image
-          priority
-          src="/images/logo.png"
-          alt="logo"
-          width={55}
-          height={65}
-          style={{ cursor: "pointer" }}
-        />
+        <Text
+          fontSize="xl"
+          fontWeight="bold"
+          color={colorMode === "light" ? "#043a7b" : "white"}
+        >
+          KAI
+        </Text>
+        <Text>Insurance Agency</Text>
       </ChakraLink>
 
       {/* Desktop Nav Links */}
@@ -92,7 +103,6 @@ const MainNav = () => {
                         rounded="md"
                         py={2}
                         minW="200px"
-                        bg="gray.50" // connected grey background
                         shadow="md"
                       >
                         {item.children.map((child: any, j: any) => (
@@ -148,35 +158,24 @@ const MainNav = () => {
 
       {/* Desktop Buttons */}
       <HStack gap={3} display={{ base: "none", md: "flex" }}>
+        <ClientOnly fallback={<Skeleton boxSize="8" />}>
+          <IconButton onClick={toggleColorMode} variant="outline" size="sm">
+            {colorMode === "light" ? <LuSun /> : <LuMoon />}
+          </IconButton>
+        </ClientOnly>
+
         <ChakraLink
           as={NextLink}
           href="https://invest.nabocapital.com"
           target="_blank"
         >
           <Button
-            variant="outline"
-            borderColor="brand"
-            borderRadius="xl"
-            fontWeight="semibold"
-            size={{ base: "sm", lg: "md" }}
-          >
-            Log In
-          </Button>
-        </ChakraLink>
-        <ChakraLink
-          as={NextLink}
-          href="https://invest.nabocapital.com"
-          target="_blank"
-        >
-          <Button
-            bg="primary"
-            color="white"
             borderRadius="xl"
             fontWeight="semibold"
             size={{ base: "sm", lg: "md" }}
             _hover={{ bg: "cyan.600" }}
           >
-            INVEST NOW
+            GET A QUOTE
           </Button>
         </ChakraLink>
       </HStack>
