@@ -1,22 +1,24 @@
+"use client";
 import { MarginX } from "@/utils/constants";
 import { Box, Grid, Heading, Text, VStack } from "@chakra-ui/react";
 import { AwardIcon, ShieldIcon, TargetIcon, UsersIcon } from "lucide-react";
-import React from "react";
+import { useColorMode } from "../ui/color-mode";
 
 const CoreValues = () => {
+  const { setColorMode, colorMode } = useColorMode();
   return (
     <Box as="section" id="core-values" my={2} marginX={MarginX}>
       <Box
-        bg="gray.50"
+        bg={colorMode === "light" ? "gray.100" : "gray.500"}
         borderRadius="2xl"
         py={{ base: 10, md: 12 }}
-        // px={{ base: 6, md: 12 }}
       >
         <Heading
           fontSize={{ base: "2xl", md: "3xl" }}
           textAlign="center"
           mb={{ base: 8, md: 12 }}
           fontWeight="bold"
+          color={colorMode === "light" ? "black" : "white"}
         >
           Core Values
         </Heading>

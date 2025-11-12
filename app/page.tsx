@@ -4,6 +4,7 @@ import {
   CoreValues,
   Hero,
   Services,
+  Team,
   ValueProposition,
 } from "@/components/Home";
 
@@ -15,6 +16,7 @@ const page = () => {
       <About />
       <CoreValues />
       <ValueProposition />
+      <Team />
       <Contact />
     </>
   );

@@ -38,13 +38,15 @@ const Hero = () => {
         bgImage="url('/images/hero-bg.jpg')"
         bgSize="cover"
         bgPos="center"
+        bgBlendMode={"multiply"}
+        bgColor={"blue.200"}
       >
-        {/* Gradient Overlay */}
+        {/* Gradient Overlay
         <Box
           position="absolute"
           inset={0}
           bgGradient="linear(to-r, red.200, blue.200)"
-        />
+        /> */}
       </Box>
 
       {/* Content */}

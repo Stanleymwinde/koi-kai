@@ -67,3 +67,44 @@ export const contactsData = [
     link: "https://maps.app.goo.gl/edawWqg4TaBvwSfe8",
   },
 ];
+
+export const TeamMates = [
+  {
+    name: "Priscilla W Ngirichi",
+    role: "Founder & Principal Officer",
+    imageUrl: "/images/logo.jpg",
+    qualifications: [
+      "Degree in Management & Leadership (Management University of Africa)",
+      "Diploma in Cooperative Management (Cooperative University)",
+      "C.P.A (Strathmore University)",
+      "Micro-M.B.A Program - Strathmore Business School",
+      "Certificate of Proficiency (College of Insurance)",
+    ],
+  },
+  {
+    name: "Lilian Ngirichi",
+    role: "Head of Strategy",
+    imageUrl: "/images/logo.jpg",
+    qualifications: ["Clarity Master"],
+  },
+  {
+    name: "James Kamau",
+    role: "Finance",
+    imageUrl: "/images/logo.jpg",
+    qualifications: [
+      "Bachelor's degree in Accounting",
+      "Certified Public Accountant (CPA)",
+      "Diploma in Insurance (College of Insurance)",
+    ],
+  },
+  {
+    name: "Smwinde",
+    role: "Systems Administrator",
+    imageUrl: "/images/logo.jpg",
+    qualifications: [
+      "Bachelor's degree in Information Technology",
+      "Certified Information Systems Security Professional (CISSP)",
+      "Microsoft Certified: Azure Solutions Architect Expert",
+    ],
+  },
+];
