@@ -16,12 +16,13 @@ import {
 import { CheckCircle } from "lucide-react";
 import { Heart, Car, Users, Briefcase, Shield, TrendingUp } from "lucide-react";
 import { useColorMode } from "../ui/color-mode";
+import { FaHelmetSafety } from "react-icons/fa6";
 
 const services = [
   {
     title: "Medical Insurance",
     desc: "Corporate, individual, and SME medical covers tailored to your needs.",
-    icon: <Heart size={22} color="#1A365D" />,
+    icon: <Heart size={26} color="#1A365D" />,
     items: [
       "Corporate Medical Covers",
       "Individual Medical Covers",
@@ -31,7 +32,7 @@ const services = [
   {
     title: "Motor Vehicle Insurance",
     desc: "Comprehensive coverage for all types of vehicles.",
-    icon: <Car size={22} color="#1A365D" />,
+    icon: <Car size={26} color="#1A365D" />,
     items: [
       "Motor Private Insurance",
       "Motor Commercial Insurance",
@@ -41,7 +42,7 @@ const services = [
   {
     title: "W.I.B.A & E.L Covers",
     desc: "Work Injury Benefits Act and Employer's Liability protection.",
-    icon: <Users size={22} color="#1A365D" />,
+    icon: <Users size={26} color="#1A365D" />,
     items: [
       "Cover against employment-related liabilities",
       "Comprehensive workplace protection",
@@ -50,7 +51,7 @@ const services = [
   {
     title: "Business/Asset Insurance",
     desc: "Protect your business assets and operations.",
-    icon: <Briefcase size={22} color="#1A365D" />,
+    icon: <Briefcase size={26} color="#1A365D" />,
     items: [
       "SME / Enterprise Covers",
       "Commercial Property Covers",
@@ -60,7 +61,7 @@ const services = [
   {
     title: "Life Insurance",
     desc: "Secure your family's future with comprehensive life coverage.",
-    icon: <Shield size={22} color="#1A365D" />,
+    icon: <Shield size={26} color="#1A365D" />,
     items: [
       "Term Life Insurance",
       "Education Policies",
@@ -70,11 +71,21 @@ const services = [
   {
     title: "Pension Covers",
     desc: "Plan for a secure retirement with our pension solutions.",
-    icon: <TrendingUp size={22} color="#1A365D" />,
+    icon: <TrendingUp size={26} color="#1A365D" />,
     items: [
       "Personal Pension Plans",
       "Corporate Pension Solutions",
       "Retirement Savings",
+    ],
+  },
+  {
+    title: "Contractor All Risks",
+    desc: "Comprehensivre coverage for construction projects and contract works.",
+    icon: <FaHelmetSafety size={26} color="#1A365D" />,
+    items: [
+      "Contract Works Coverage",
+      "Machinery & Materials",
+      "Site Liabilities & Employee Protection",
     ],
   },
 ];

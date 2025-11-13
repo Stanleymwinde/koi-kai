@@ -17,7 +17,9 @@ const page = () => {
       <CoreValues />
       <ValueProposition />
       <Team />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
     </>
   );
 };

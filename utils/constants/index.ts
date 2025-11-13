@@ -13,19 +13,15 @@ export const navItems = [
   },
   {
     label: "Services",
-    href: "/institutional",
-    // children: [
-    //   { label: "Our Approach", href: "/institutional/treasury" },
-    //   { label: "Resources", href: "/tools_and_resources" },
-    // ],
+    href: "https://kai-insurance-one.vercel.app/services",
   },
   {
     label: "About",
-    href: "/about",
+    href: "https://kai-insurance-one.vercel.app/about",
   },
   {
-    label: "Team",
-    href: "/Team",
+    label: "Contact",
+    href: "https://kai-insurance-one.vercel.app/contact",
   },
 ];
 

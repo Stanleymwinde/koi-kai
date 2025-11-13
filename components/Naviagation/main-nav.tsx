@@ -164,11 +164,7 @@ const MainNav = () => {
           </IconButton>
         </ClientOnly>
 
-        <ChakraLink
-          as={NextLink}
-          href="https://invest.nabocapital.com"
-          target="_blank"
-        >
+        <ChakraLink as={NextLink} href="/#contact">
           <Button
             borderRadius="xl"
             fontWeight="semibold"

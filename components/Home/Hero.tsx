@@ -20,35 +20,25 @@ const Hero = () => {
   };
 
   return (
-    <Box
+    <Flex
       as="section"
       id="home"
       position="relative"
       minH="100vh"
-      display="flex"
       alignItems="center"
       justifyContent="center"
       overflow="hidden"
+      bgImage="url('/images/hero-bg.jpg')"
+      bgSize="cover"
+      bgPos="center"
+      _before={{
+        content: '""',
+        position: "absolute",
+        inset: 0,
+        bgColor: "rgba(44, 81, 128, 0.8)",
+        zIndex: 1,
+      }}
     >
-      {/* Background Image */}
-      <Box
-        position="absolute"
-        inset={0}
-        zIndex={0}
-        bgImage="url('/images/hero-bg.jpg')"
-        bgSize="cover"
-        bgPos="center"
-        bgBlendMode={"multiply"}
-        bgColor={"blue.200"}
-      >
-        {/* Gradient Overlay
-        <Box
-          position="absolute"
-          inset={0}
-          bgGradient="linear(to-r, red.200, blue.200)"
-        /> */}
-      </Box>
-
       {/* Content */}
       <VStack gap={4} textAlign="center" px={4} zIndex={4} maxW="900px">
         <Heading
@@ -113,7 +103,7 @@ const Hero = () => {
           </Button>
         </Flex>
       </VStack>
-    </Box>
+    </Flex>
   );
 };
 
