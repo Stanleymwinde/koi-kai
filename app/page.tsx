@@ -1,5 +1,5 @@
 import {
-  About,
+  AboutUs,
   Contact,
   CoreValues,
   Hero,
@@ -13,7 +13,7 @@ const page = () => {
     <>
       <Hero />
       <Services />
-      <About />
+      <AboutUs />
       <CoreValues />
       <ValueProposition />
       <Team />

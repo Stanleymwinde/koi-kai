@@ -17,7 +17,7 @@ export const navItems = [
   },
   {
     label: "About",
-    href: "https://kai-insurance-one.vercel.app/about",
+    href: "/AboutUs",
   },
   {
     label: "Contact",
@@ -103,4 +103,25 @@ export const TeamMates = [
       "Microsoft Certified: Azure Solutions Architect Expert",
     ],
   },
+];
+
+export const missionVisionData = [
+  {
+    id: "mission",
+    title: "Our Mission",
+    image: "/images/hero-bg.jpg",
+    description: [
+      "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. They are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of their operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
+     
+    ]
+  },
+  {
+    id: "vision",
+    title: "Our Vision",
+    image: "/images/hero-bg.jpg",
+    description: [
+      "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Their goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities they serve.",
+    
+    ]
+  }
 ];
