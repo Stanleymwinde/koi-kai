@@ -158,17 +158,14 @@ const MainNav = () => {
 
       {/* Desktop Buttons */}
       <HStack gap={3} display={{ base: "none", md: "flex" }}>
-        <ClientOnly fallback={<Skeleton boxSize="8" />}>
-          <IconButton onClick={toggleColorMode} variant="outline" size="sm">
-            {colorMode === "light" ? <LuSun /> : <LuMoon />}
-          </IconButton>
-        </ClientOnly>
-
         <ChakraLink as={NextLink} href="/#contact">
           <Button
             borderRadius="xl"
             fontWeight="semibold"
             size={{ base: "sm", lg: "md" }}
+            bgGradient="to-r"
+            gradientFrom={"#000000ff"}
+            gradientTo={"#e60000ff"}
             _hover={{ bg: "cyan.600" }}
           >
             GET A QUOTE

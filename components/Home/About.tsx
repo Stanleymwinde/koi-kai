@@ -28,7 +28,13 @@ const About = () => {
         mt={6}
       >
         <Box
-          bg={colorMode === "light" ? "#043a7b" : "#ee862a"}
+          _hover={{
+            transform: "translateY(-6px)",
+          }}
+          transition="transform 0.2s ease"
+          bgGradient="to-r"
+          gradientFrom={"#000000ff"}
+          gradientTo={"#e60000ff"}
           p={8} // consistent padding
           color={colorMode === "light" ? "white" : "black"}
           borderRadius="xl"
@@ -48,7 +54,13 @@ const About = () => {
         </Box>
 
         <Box
-          bg={colorMode === "light" ? "#ee862a" : "#043a7b"}
+          _hover={{
+            transform: "translateY(-6px)",
+          }}
+          transition="transform 0.2s ease"
+          bgGradient="to-r"
+          gradientFrom={"#e60000ff"}
+          gradientTo={"#000000ff"}
           p={10} // match padding
           color={colorMode === "light" ? "white" : "white"}
           borderRadius="xl"

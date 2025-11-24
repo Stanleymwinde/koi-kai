@@ -32,8 +32,12 @@ const ContactDetails = () => {
           p={8}
           borderRadius="xl"
           bgGradient="to-r"
-          gradientFrom={"#114180"}
-          gradientTo={"#42597aff"}
+          gradientFrom={"#000000ff"}
+          gradientTo={"#e60000ff"}
+          _hover={{
+            transform: "translateY(-6px)",
+          }}
+          transition="transform 0.2s ease"
           color="white"
           boxShadow="lg"
         >

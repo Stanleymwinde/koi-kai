@@ -1,3 +1,4 @@
+import Insure from "@/components/common/Insure";
 import {
   AboutUs,
   Contact,
@@ -12,6 +13,7 @@ const page = () => {
   return (
     <>
       <Hero />
+      <Insure />
       <Services />
       <AboutUs />
       <CoreValues />

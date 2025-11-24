@@ -117,18 +117,24 @@ const ContactForm = () => {
         </Field.Root>
 
         <Button
-          bg="#114180"
+          bgGradient="to-r"
+          gradientFrom={"#e60000ff"}
+          gradientTo={"#000000ff"}
           color="white"
           size="lg"
           fontSize="md"
           fontWeight="semibold"
           _hover={{
-            bg: "#0d3366",
+            bgGradient: "to-r",
+            gradientFrom: "#000000ff",
+            gradientTo: "#e60000ff",
             transform: "translateY(-1px)",
           }}
-          _active={{
-            bg: "#0a284d",
-          }}
+          // _active={{
+          //   bgGradient: "to-r",
+          //   gradientFrom: "#000000ff",
+          //   gradientTo: "#e60000ff",
+          // }}
           transition="all 0.2s"
         >
           Send Message

@@ -13,10 +13,17 @@ import NextLink from "next/link";
 
 export default function Footer() {
   return (
-    <Box as="footer" bg="#043a7b" color="white" py={10}>
+    <Box
+      bgGradient={"to-r"}
+      gradientFrom={"#000000ff"}
+      gradientTo={"#e60000ff"}
+      as="footer"
+      color="white"
+      py={10}
+    >
       <Container maxW="6xl">
         <Grid
-          templateColumns={{ base: "1fr", md: "repeat(3, 1fr)" }}
+          templateColumns={{ base: "1fr", md: "repeat(4, 1fr)" }}
           gap={10}
           pb={10}
           borderBottom="1px solid"
@@ -36,6 +43,28 @@ export default function Footer() {
           <Box>
             <Heading as="h3" size="sm" mb={4}>
               Quick Links
+            </Heading>
+            <Stack gap={2}>
+              {["Home", "Services", "About", "Team", "Contact"].map((item) => (
+                <Link
+                  color={"white"}
+                  as={NextLink}
+                  key={item}
+                  href={`/${
+                    item.toLowerCase() === "home" ? "" : item.toLowerCase()
+                  }`}
+                  _hover={{ color: "blue.200", textDecoration: "none" }}
+                >
+                  {item}
+                </Link>
+              ))}
+            </Stack>
+          </Box>
+
+          {/* Column 2: Quick Links */}
+          <Box>
+            <Heading as="h3" size="sm" mb={4}>
+              Our Services
             </Heading>
             <Stack gap={2}>
               {["Home", "Services", "About", "Team", "Contact"].map((item) => (
