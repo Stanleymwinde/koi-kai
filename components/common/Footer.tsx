@@ -45,19 +45,21 @@ export default function Footer() {
               Quick Links
             </Heading>
             <Stack gap={2}>
-              {["Home", "Services", "About", "Team", "Contact"].map((item) => (
-                <Link
-                  color={"white"}
-                  as={NextLink}
-                  key={item}
-                  href={`/${
-                    item.toLowerCase() === "home" ? "" : item.toLowerCase()
-                  }`}
-                  _hover={{ color: "blue.200", textDecoration: "none" }}
-                >
-                  {item}
-                </Link>
-              ))}
+              {["Home", "Services", "About", "Team", "Contact", "faqs"].map(
+                (item) => (
+                  <Link
+                    color={"white"}
+                    as={NextLink}
+                    key={item}
+                    href={`/${
+                      item.toLowerCase() === "home" ? "" : item.toLowerCase()
+                    }`}
+                    _hover={{ color: "blue.200", textDecoration: "none" }}
+                  >
+                    {item}
+                  </Link>
+                )
+              )}
             </Stack>
           </Box>
 

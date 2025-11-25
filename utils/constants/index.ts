@@ -13,7 +13,7 @@ export const navItems = [
   },
   {
     label: "Services",
-    href: "https://kai-insurance-one.vercel.app/services",
+    href: "/services",
   },
   {
     label: "About",
@@ -21,7 +21,7 @@ export const navItems = [
   },
   {
     label: "Contact",
-    href: "https://kai-insurance-one.vercel.app/contact",
+    href: "/Contact-us",
   },
 ];
 
@@ -102,6 +102,39 @@ export const TeamMates = [
       "Certified Information Systems Security Professional (CISSP)",
       "Microsoft Certified: Azure Solutions Architect Expert",
     ],
+  },
+];
+
+export const FaqsData1 = [
+  {
+    value: "a",
+    title: "What is the minimum investment amount for the various funds?​",
+    text: "Currently, the minimum investment amount for all funds is KES 100,000. But clients who have below KES 100,000 can channel the funds through Chumz App.​",
+  },
+  {
+    value: "b",
+    title: "What is the minimum top-up amount for the various funds?​",
+    text: "The minimum top-up amount for all funds is KES 10,000​",
+  },
+  {
+    value: "c",
+    title: "What hidden charges are there?",
+    text: "There are none",
+  },
+  {
+    value: "d",
+    title: "Can I top up my account?",
+    text: "You can contact our customer support team via whatsapp at +254709902700",
+  },
+  {
+    value: "e",
+    title: " Is there any locking period?​",
+    text: "Only for Nabo KES Fixed Income Fund for a period of 6 months on the initial investment, subsequent top-ups are not locked.",
+  },
+  {
+    value: "f",
+    title: "Are the returns guaranteed?​",
+    text: "No, we are not required to guarantee returns as per the CMA regulations as the assets we invest in don’t guarantee returns.​",
   },
 ];
 

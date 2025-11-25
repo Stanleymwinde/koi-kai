@@ -38,7 +38,13 @@ const MainNav = () => {
       left={0}
       right={0}
       zIndex={5}
-      // bg={colorMode === "light" ? "white" : "gray.800"}
+      bg="rgba(255,255,255,0.25)"
+      style={{
+        backdropFilter: "saturate(180%) blur(8px)",
+        WebkitBackdropFilter: "saturate(180%) blur(8px)",
+      }}
+      borderBottomWidth="1px"
+      borderBottomColor="rgba(0,0,0,0.06)"
     >
       {/* Logo */}
       <ChakraLink as={NextLink} href="/">
