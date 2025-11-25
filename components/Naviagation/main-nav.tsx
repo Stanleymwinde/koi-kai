@@ -27,29 +27,22 @@ const MainNav = () => {
 
   return (
     <Flex
-      py={4}
+      py={2}
       justify="space-between"
       px={{ base: 4, md: 10 }}
       align="center"
       boxShadow="sm"
       wrap="wrap"
-      bg={colorMode === "light" ? "white" : "black"}
       position="fixed"
       top={0}
       left={0}
       right={0}
       zIndex={5}
+      // bg={colorMode === "light" ? "white" : "gray.800"}
     >
       {/* Logo */}
       <ChakraLink as={NextLink} href="/">
-        <Text
-          fontSize="xl"
-          fontWeight="bold"
-          color={colorMode === "light" ? "#043a7b" : "white"}
-        >
-          KAI
-        </Text>
-        <Text>Insurance Agency</Text>
+        <Image src={"/images/logo.png"} alt="Logo" width={80} height={50} />
       </ChakraLink>
 
       {/* Desktop Nav Links */}
@@ -79,6 +72,7 @@ const MainNav = () => {
                     as={NextLink}
                     href={item.href || "#"}
                     _hover={{ textDecoration: "none" }}
+                    bg={"gray.300"}
                   >
                     <Button
                       variant="ghost"

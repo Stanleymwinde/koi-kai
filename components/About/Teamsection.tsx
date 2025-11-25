@@ -31,17 +31,23 @@ const TeamSection: React.FC = () => {
           textAlign="center"
           fontFamily="poppins"
         >
-          Our dedicated professionals bring expertise, passion, and integrity to every client relationship.
+          Our dedicated professionals bring expertise, passion, and integrity to
+          every client relationship.
         </Text>
 
         {/* Board Section */}
         <Box mb={{ base: 8, md: 16 }}>
-
           <SimpleGrid
-            columns={{ base: 1, sm: 2, md: 3 }}
+            columns={{ base: 1, sm: 2, md: 4 }}
             gap={{ base: 6, md: 10 }}
             justifyItems="center"
           >
+            <TeamMemberCard
+              name="Priscilla Ngirichi"
+              title="Chief Executive Officer"
+              image="/images/Kui-bw.jpg"
+              linkedin="#"
+            />
             <TeamMemberCard
               name="Priscilla Ngirichi"
               title="Chief Executive Officer"
@@ -60,10 +66,8 @@ const TeamSection: React.FC = () => {
               image="/images/BEE.png"
               linkedin="#"
             />
-           
           </SimpleGrid>
         </Box>
-
       </Container>
     </Box>
   );

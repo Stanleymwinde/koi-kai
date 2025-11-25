@@ -68,7 +68,7 @@ export const TeamMates = [
   {
     name: "Priscilla W Ngirichi",
     role: "Founder & Principal Officer",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui1.jpeg",
     qualifications: [
       "Degree in Management & Leadership (Management University of Africa)",
       "Diploma in Cooperative Management (Cooperative University)",
@@ -80,13 +80,13 @@ export const TeamMates = [
   {
     name: "Lilian Ngirichi",
     role: "Head of Strategy",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui.jpeg",
     qualifications: ["Clarity Master"],
   },
   {
     name: "James Kamau",
     role: "Finance",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui1.jpeg",
     qualifications: [
       "Bachelor's degree in Accounting",
       "Certified Public Accountant (CPA)",
@@ -96,7 +96,7 @@ export const TeamMates = [
   {
     name: "Smwinde",
     role: "Systems Administrator",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui.jpeg",
     qualifications: [
       "Bachelor's degree in Information Technology",
       "Certified Information Systems Security Professional (CISSP)",
@@ -109,19 +109,17 @@ export const missionVisionData = [
   {
     id: "mission",
     title: "Our Mission",
-    image: "/images/hero-bg.jpg",
+    image: "/images/mission.jpeg",
     description: [
       "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. They are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of their operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
-     
-    ]
+    ],
   },
   {
     id: "vision",
     title: "Our Vision",
-    image: "/images/hero-bg.jpg",
+    image: "/images/vission.jpeg",
     description: [
       "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Their goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities they serve.",
-    
-    ]
-  }
+    ],
+  },
 ];

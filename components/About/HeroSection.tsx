@@ -17,8 +17,7 @@ const HeroSection: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bgImage="url('/images/hero-bg.jpg')"
-
+        bgImage="url('/images/about-bg.jpeg')"
         bgSize="cover"
         bgPos="center"
         zIndex={0}
@@ -61,8 +60,8 @@ const HeroSection: React.FC = () => {
           fontSize={{ base: "sm", sm: "md", md: "xl" }}
           maxW={{ base: "90%", md: "600px" }}
         >
-         Dedicated to educating and empowering our clients with knowledge on
-         insurance matters while offering solutions for all
+          Dedicated to educating and empowering our clients with knowledge on
+          insurance matters while offering solutions for all
         </Text>
 
         {/* Buttons: stacked on mobile */}
@@ -73,9 +72,9 @@ const HeroSection: React.FC = () => {
           w={{ base: "full", sm: "auto" }}
         >
           <Button
-            color="#114180"
+            color="#000000ff"
             w={{ base: "full", sm: "auto" }}
-            _hover={{ bg: "#ee862a" }}
+            _hover={{ bg: "#ee2a2aff" }}
             size={{ base: "md", sm: "lg" }}
             py={{ base: 2, sm: 4 }}
             onClick={() => {
@@ -84,14 +83,16 @@ const HeroSection: React.FC = () => {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
+            bg={"white"}
           >
             Meet Our Team
           </Button>
 
           <Button
-            color="#114180"
+            bg={"white"}
+            color="#000000ff"
             w={{ base: "full", sm: "auto" }}
-            _hover={{ bg: "#ee862a" }}
+            _hover={{ bg: "#ee2a2aff" }}
             size={{ base: "md", sm: "lg" }}
             py={{ base: 2, sm: 4 }}
             onClick={() => {

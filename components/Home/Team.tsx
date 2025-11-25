@@ -1,4 +1,3 @@
-"use client";
 import { MarginX, TeamMates } from "@/utils/constants";
 import {
   Box,
@@ -12,9 +11,8 @@ import {
 import { useColorMode } from "../ui/color-mode";
 
 const Team = () => {
-  const { setColorMode, colorMode } = useColorMode();
   return (
-    <Box as={"section"} bg={colorMode === "light" ? "#fafbfd" : "black"} py={8}>
+    <Box as={"section"} py={8}>
       <Box marginX={MarginX}>
         <Box textAlign={"center"}>
           <Heading

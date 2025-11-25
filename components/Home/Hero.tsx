@@ -7,35 +7,38 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
-import {
-  Box,
-  Button,
-  Flex,
-  Heading,
-  Text,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Flex, Heading, Text, VStack } from "@chakra-ui/react";
 import Image from "next/image";
 import { ArrowRight } from "lucide-react";
 
 const slider_content = [
   {
-    title: "WE MAKE INSURANCE EASY!",
+    title: "We Make Insurance Easy",
+    image: "/images/hero-bg.jpg",
     subText: "Need Insurance?",
     highlight: "Ask Me - I CAN HELP!",
     desc: "Transforming insurance accessibility in Kenya. Everyone deserves access to the insurance covers they need.",
   },
   {
-    title: "YOUR PEACE OF MIND MATTERS!",
+    title: "Your Peace of Mind Matters",
+    image: "/images/hero-bg2.jpeg",
     subText: "Looking for Coverage?",
     highlight: "Let Me Guide You!",
     desc: "Whether it's health, motor, or life insurance — I simplify everything for you.",
   },
   {
-    title: "AFFORDABLE & RELIABLE INSURANCE",
+    title: "Affordable & Reliable Coverage",
+    image: "/images/hero-bg3.jpeg",
     subText: "Need Something Quick?",
     highlight: "I'm Here To Assist!",
     desc: "Fast, seamless, and transparent insurance services tailored for you.",
+  },
+  {
+    title: "Fast, Transparent Insurance Solutions",
+    image: "/images/hero-bg4.jpeg",
+    subText: "Tired of Complicated Processes?",
+    highlight: "I'm Here To Assist!",
+    desc: "Transparent insurance solutions made simple and accessible for all.",
   },
 ];
 
@@ -79,7 +82,7 @@ const HeroSwiper = () => {
               {/* Background Image */}
               <Box position="absolute" inset={0} zIndex={0}>
                 <Image
-                  src="/images/hero-bg.jpg"
+                  src={item.image}
                   alt="Hero background"
                   fill
                   style={{ objectFit: "cover" }}
@@ -88,18 +91,12 @@ const HeroSwiper = () => {
                 <Box
                   position="absolute"
                   inset={0}
-                  bg="rgba(44, 81, 128, 0.45)"   // ⭐ Reduced opacity!
+                  bg="rgba(44, 81, 128, 0.45)" // ⭐ Reduced opacity!
                 />
               </Box>
 
               {/* Content */}
-              <VStack
-                gap={4}
-                textAlign="center"
-                px={4}
-                zIndex={4}
-                maxW="700px"
-              >
+              <VStack gap={4} textAlign="center" px={4} zIndex={4} maxW="700px">
                 <Heading
                   fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}
                   fontWeight="bold"
