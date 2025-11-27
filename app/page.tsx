@@ -8,6 +8,7 @@ import {
   Team,
   ValueProposition,
 } from "@/components/Home";
+import { CTAsection, WhyChooseUs } from "@/components/Services";
 
 const page = () => {
   return (
@@ -18,9 +19,13 @@ const page = () => {
       <AboutUs />
       <CoreValues />
       <ValueProposition />
+      <WhyChooseUs />
       <Team />
       <div id="contact">
         <Contact />
+        
+        <CTAsection />
+
       </div>
     </>
   );

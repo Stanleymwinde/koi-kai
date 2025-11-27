@@ -38,7 +38,7 @@ const MissionVisionSection: React.FC = () => {
         <Heading
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
-          color="#043a7b"
+          color="black"
           textAlign="center"
           fontFamily="poppins"
         >
@@ -62,7 +62,7 @@ const MissionVisionSection: React.FC = () => {
         {" "}
         {/* MOVED UP SLIGHTLY */}
         <Box
-          bgGradient="to-r"
+          bgGradient={"to-r"}
           gradientFrom={"#000000ff"}
           gradientTo={"#e60000ff"}
           p={{ base: 4, md: 8 }}
@@ -82,12 +82,12 @@ const MissionVisionSection: React.FC = () => {
               >
                 <Circle
                   size={circleSize}
-                  bg={activeItem.id === item.id ? "#ee862a" : "white"}
+                  bg={activeItem.id === item.id ? "#e60000ff" : "white"}
                   border="2px solid white"
                   transition="all 0.3s ease"
                   _hover={{
                     transform: "scale(1.2)",
-                    bg: "#ee862a",
+                    bg: "#e60000ff",
                   }}
                 />
                 <Text
@@ -112,8 +112,8 @@ const MissionVisionSection: React.FC = () => {
             {/* Left side text */}
             <Box flex={1}>
               <Text
-                fontSize={{ base: "md", md: "28px" }}
-                color="#ee862a"
+                fontSize={{ base: "md", md: "20px" }}
+                color="whiteAlpha.900"
                 fontWeight="bold"
                 mb={3}
                 textTransform="uppercase"

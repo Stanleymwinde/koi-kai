@@ -1,7 +1,13 @@
-import React from "react";
+import { Hero, ServicesSection, WhyChooseUs, CTAsection } from "@/components/Services";
 
-const page = () => {
-  return <div>page</div>;
-};
-
-export default page;
+export default function AboutPage() {
+  return (
+    <main>
+      <Hero />
+        <ServicesSection />
+        <WhyChooseUs />
+        <CTAsection />
+      
+    </main>
+  );
+}

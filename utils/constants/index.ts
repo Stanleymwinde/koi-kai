@@ -1,6 +1,8 @@
 import { LocationEditIcon, MailIcon, PhoneIcon } from "lucide-react";
 import { TbLocationDiscount } from "react-icons/tb";
 
+export const marginX = { base: "3%", sm: "2%", md: "4%", lg: "6%" };
+
 export const navItems = [
   {
     label: "Home",
@@ -13,7 +15,7 @@ export const navItems = [
   },
   {
     label: "Services",
-    href: "/services",
+    href: "/Services",
   },
   {
     label: "About",
@@ -21,7 +23,7 @@ export const navItems = [
   },
   {
     label: "Contact",
-    href: "/Contact-us",
+    href: "/Contact",
   },
 ];
 
@@ -142,17 +144,43 @@ export const missionVisionData = [
   {
     id: "mission",
     title: "Our Mission",
-    image: "/images/mission.jpeg",
+    image: "/images/missioni.jpeg",
     description: [
-      "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. They are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of their operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
-    ],
+      "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. We are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of our operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
+     
+    ]
   },
   {
     id: "vision",
     title: "Our Vision",
-    image: "/images/vission.jpeg",
+    image: "/images/vision.jpeg",
     description: [
-      "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Their goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities they serve.",
-    ],
+      "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Our goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities we serve.",
+    
+    ]
+  }
+];
+
+export const FaqsData = [
+  {
+    value: "a",
+    title: "What are your business hours?​",
+    text: "Our offices are open Monday to Friday, 8:30 AM – 5:00 PM. We are closed on weekends and public holidays.​",
+  },
+  {
+    value: "b",
+    title: "How long does it take to process a claim?​",
+    text: "Claims are typically processed within 5–10 business days, depending on the type and complexity of the claim.​",
+  },
+  {
+    value: "c",
+    title: "Do I need to visit your office to get a quote?",
+    text: "No, you can request a quote directly through our website or by contacting our support team via phone or email.",
+  },
+  {
+    value: "d",
+    title: "Where are you located?",
+    text: "We are based at Millenium business park on Langata-Karen Rd - 2nd Floor Nairobi, Kenya. You can also find us on Google Maps for easy directions.",
   },
 ];
+
