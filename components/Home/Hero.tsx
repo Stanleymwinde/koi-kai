@@ -21,21 +21,21 @@ const slider_content = [
   },
   {
     title: "Your Peace of Mind Matters",
-    image: "/images/hero-bg2.jpeg",
+    image: "/images/isk112.jpeg",
     subText: "Looking for Coverage?",
     highlight: "Let Me Guide You!",
     desc: "Whether it's health, motor, or life insurance — I simplify everything for you.",
   },
   {
     title: "Affordable & Reliable Coverage",
-    image: "/images/hero-bg3.jpeg",
+    image: "/images/isk98.jpeg",
     subText: "Need Something Quick?",
     highlight: "I'm Here To Assist!",
     desc: "Fast, seamless, and transparent insurance services tailored for you.",
   },
   {
     title: "Fast, Transparent Insurance Solutions",
-    image: "/images/hero-bg4.jpeg",
+    image: "/images/isk136.jpeg",
     subText: "Tired of Complicated Processes?",
     highlight: "I'm Here To Assist!",
     desc: "Transparent insurance solutions made simple and accessible for all.",
@@ -91,7 +91,7 @@ const HeroSwiper = () => {
                 <Box
                   position="absolute"
                   inset={0}
-                  bg="rgba(44, 81, 128, 0.45)" // ⭐ Reduced opacity!
+                  bg="rgba(0, 0, 0, 0.6)" // ⭐ Changed overlay to black
                 />
               </Box>
 

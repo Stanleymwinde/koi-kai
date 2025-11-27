@@ -15,11 +15,7 @@ export const navItems = [
   },
   {
     label: "Services",
-<<<<<<< HEAD
     href: "/Services",
-=======
-    href: "/services",
->>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
   },
   {
     label: "About",
@@ -27,11 +23,7 @@ export const navItems = [
   },
   {
     label: "Contact",
-<<<<<<< HEAD
     href: "/Contact",
-=======
-    href: "/Contact-us",
->>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
   },
 ];
 
@@ -152,36 +144,21 @@ export const missionVisionData = [
   {
     id: "mission",
     title: "Our Mission",
-<<<<<<< HEAD
     image: "/images/missioni.jpeg",
     description: [
       "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. We are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of our operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
      
     ]
-=======
-    image: "/images/mission.jpeg",
-    description: [
-      "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. They are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of their operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
-    ],
->>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
   },
   {
     id: "vision",
     title: "Our Vision",
-<<<<<<< HEAD
     image: "/images/vision.jpeg",
     description: [
       "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Our goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities we serve.",
     
     ]
   }
-=======
-    image: "/images/vission.jpeg",
-    description: [
-      "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Their goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities they serve.",
-    ],
-  },
->>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
 ];
 
 export const FaqsData = [

@@ -82,9 +82,9 @@ const HeroSection: React.FC = () => {
           w={{ base: "full", sm: "auto" }}
         >
           <Button
-            color="white"
+            color="black"
             w={{ base: "full", sm: "auto" }}
-            bg="#e60000"
+            bg="white"
             _hover={{ bg: "#cc0000", transform: "translateY(-2px)", boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)" }}
             _active={{ transform: "translateY(0)" }}
             size={{ base: "md", sm: "lg" }}
