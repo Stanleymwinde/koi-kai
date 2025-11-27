@@ -28,8 +28,7 @@ const coreValues = [
 const CoreValuesSection = () => {
   return (
     <Box
-      
-      pb={{ base: 12, md: 20 }}    // keep nice bottom spacing
+      pb={{ base: 12, md: 20 }} // keep nice bottom spacing
       px={{ base: 6, md: 20 }}
       bg="white"
       fontFamily="'Poppins', sans-serif"
@@ -53,15 +52,13 @@ const CoreValuesSection = () => {
           fontSize={{ base: "lg", md: "xl" }}
           fontFamily="poppins"
         >
-          The foundation of Kai Insurance is built on these values that guide how we serve our clients every day.
+          The foundation of Kai Insurance is built on these values that guide
+          how we serve our clients every day.
         </Text>
       </VStack>
 
       {/* Values Grid */}
-      <SimpleGrid
-        columns={{ base: 1, md: 2, lg: 4 }}
-        gap={{ base: 6, md: 10 }}
-      >
+      <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={{ base: 6, md: 10 }}>
         {coreValues.map((value, i) => (
           <Box
             key={i}

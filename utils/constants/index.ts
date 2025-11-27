@@ -15,7 +15,11 @@ export const navItems = [
   },
   {
     label: "Services",
+<<<<<<< HEAD
     href: "/Services",
+=======
+    href: "/services",
+>>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
   },
   {
     label: "About",
@@ -23,7 +27,11 @@ export const navItems = [
   },
   {
     label: "Contact",
+<<<<<<< HEAD
     href: "/Contact",
+=======
+    href: "/Contact-us",
+>>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
   },
 ];
 
@@ -70,7 +78,7 @@ export const TeamMates = [
   {
     name: "Priscilla W Ngirichi",
     role: "Founder & Principal Officer",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui1.jpeg",
     qualifications: [
       "Degree in Management & Leadership (Management University of Africa)",
       "Diploma in Cooperative Management (Cooperative University)",
@@ -82,13 +90,13 @@ export const TeamMates = [
   {
     name: "Lilian Ngirichi",
     role: "Head of Strategy",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui.jpeg",
     qualifications: ["Clarity Master"],
   },
   {
     name: "James Kamau",
     role: "Finance",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui1.jpeg",
     qualifications: [
       "Bachelor's degree in Accounting",
       "Certified Public Accountant (CPA)",
@@ -98,7 +106,7 @@ export const TeamMates = [
   {
     name: "Smwinde",
     role: "Systems Administrator",
-    imageUrl: "/images/logo.jpg",
+    imageUrl: "/images/Kui.jpeg",
     qualifications: [
       "Bachelor's degree in Information Technology",
       "Certified Information Systems Security Professional (CISSP)",
@@ -107,25 +115,73 @@ export const TeamMates = [
   },
 ];
 
+export const FaqsData1 = [
+  {
+    value: "a",
+    title: "What is the minimum investment amount for the various funds?​",
+    text: "Currently, the minimum investment amount for all funds is KES 100,000. But clients who have below KES 100,000 can channel the funds through Chumz App.​",
+  },
+  {
+    value: "b",
+    title: "What is the minimum top-up amount for the various funds?​",
+    text: "The minimum top-up amount for all funds is KES 10,000​",
+  },
+  {
+    value: "c",
+    title: "What hidden charges are there?",
+    text: "There are none",
+  },
+  {
+    value: "d",
+    title: "Can I top up my account?",
+    text: "You can contact our customer support team via whatsapp at +254709902700",
+  },
+  {
+    value: "e",
+    title: " Is there any locking period?​",
+    text: "Only for Nabo KES Fixed Income Fund for a period of 6 months on the initial investment, subsequent top-ups are not locked.",
+  },
+  {
+    value: "f",
+    title: "Are the returns guaranteed?​",
+    text: "No, we are not required to guarantee returns as per the CMA regulations as the assets we invest in don’t guarantee returns.​",
+  },
+];
+
 export const missionVisionData = [
   {
     id: "mission",
     title: "Our Mission",
+<<<<<<< HEAD
     image: "/images/missioni.jpeg",
     description: [
       "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. We are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of our operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
      
     ]
+=======
+    image: "/images/mission.jpeg",
+    description: [
+      "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. They are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of their operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
+    ],
+>>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
   },
   {
     id: "vision",
     title: "Our Vision",
+<<<<<<< HEAD
     image: "/images/vision.jpeg",
     description: [
       "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Our goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities we serve.",
     
     ]
   }
+=======
+    image: "/images/vission.jpeg",
+    description: [
+      "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Their goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities they serve.",
+    ],
+  },
+>>>>>>> e2fdc1f04d65baa139f4c00771f9ccebb3754095
 ];
 
 export const FaqsData = [

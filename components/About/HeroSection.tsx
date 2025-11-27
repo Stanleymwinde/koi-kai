@@ -70,8 +70,8 @@ const HeroSection: React.FC = () => {
           textShadow="0 1px 4px rgba(0, 0, 0, 0.4)"
           opacity={0.95}
         >
-         Dedicated to educating and empowering our clients with knowledge on
-         insurance matters while offering solutions for all
+          Dedicated to educating and empowering our clients with knowledge on
+          insurance matters while offering solutions for all
         </Text>
 
         {/* Buttons: stacked on mobile */}
@@ -100,6 +100,7 @@ const HeroSection: React.FC = () => {
                 section.scrollIntoView({ behavior: "smooth" });
               }
             }}
+            background={"white"}
           >
             Meet Our Team
           </Button>

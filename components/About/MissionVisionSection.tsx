@@ -123,9 +123,9 @@ const MissionVisionSection: React.FC = () => {
               </Text>
 
               <Box
-                fontSize={{ base: "16px", md: "18px" }}
+                fontSize={{ base: "16px", md: "20px" }}
                 color="whiteAlpha.900"
-                lineHeight="2"
+                lineHeight="3"
               >
                 {activeItem.description.map((para, idx) => (
                   <Text key={idx} mb={4} fontFamily="poppins">
