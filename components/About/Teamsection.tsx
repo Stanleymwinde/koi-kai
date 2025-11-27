@@ -18,7 +18,7 @@ const TeamSection: React.FC = () => {
           fontWeight="bold"
           mb={{ base: 2, md: 4 }}
           fontFamily="poppins"
-          color="#043a7b"
+          color="black"
         >
           Meet Our Team
         </Heading>

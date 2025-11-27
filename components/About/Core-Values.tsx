@@ -39,7 +39,7 @@ const CoreValuesSection = () => {
         <Heading
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
-          color="#043a7b"
+          color="black"
           textAlign="center"
           fontFamily="poppins"
         >
@@ -68,7 +68,7 @@ const CoreValuesSection = () => {
             p={{ base: 6, md: 8 }}
             borderRadius="2xl"
             background="linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)"
-            boxShadow="0px 10px 35px rgba(0, 0, 0, 0.06)"
+            boxShadow="#e60000ff"
             border="1px solid"
             borderColor="gray.100"
             position="relative"
@@ -77,7 +77,7 @@ const CoreValuesSection = () => {
             _hover={{
               transform: "translateY(-8px) scale(1.02)",
               boxShadow: "0px 18px 40px rgba(0, 0, 0, 0.12)",
-              borderColor: "#00C8FF",
+              borderColor: "#e60000ff",
             }}
           >
             {/* Accent top bar */}
@@ -87,7 +87,7 @@ const CoreValuesSection = () => {
               left="0"
               w="100%"
               h="5px"
-              bg="linear-gradient(90deg, #00C8FF, #0066FF)"
+              bg="linear-gradient(90deg, #e41919ff, #f00707ff)"
               borderTopRadius="2xl"
             />
 
@@ -98,7 +98,7 @@ const CoreValuesSection = () => {
               left="0"
               width="100%"
               height="100%"
-              bg="radial-gradient(circle at top right, rgba(0,200,255,0.12), transparent 60%)"
+              bg="radial-gradient(circle at top right, rgba(236, 18, 18, 0.12), transparent 60%)"
               pointerEvents="none"
             />
 
@@ -130,7 +130,7 @@ const CoreValuesSection = () => {
               border="2px solid transparent"
               transition="all 0.35s ease"
               _groupHover={{
-                borderColor: "rgba(0, 200, 255, 0.5)",
+                borderColor: "rgba(239, 16, 16, 1)",
               }}
             />
           </Box>

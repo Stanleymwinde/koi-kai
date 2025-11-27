@@ -25,47 +25,51 @@ const MissionVisionSection: React.FC = () => {
     <Box
       id="section-mission"
       fontFamily="'Poppins', sans-serif"
-      pt={{ base: 10, md: 16 }}        // RAISED SECTION (was 8,12)
+      pt={{ base: 10, md: 16 }} // RAISED SECTION (was 8,12)
       pb={{ base: 12, md: 20 }}
       px={{ base: 6, md: 20 }}
       bg="white"
       w="100%"
     >
       {/* Section Heading */}
-      <VStack gap={3} mb={{ base: 4, md: 6 }}>  {/* REDUCED GAP TO RAISE CONTENT */}
+      <VStack gap={3} mb={{ base: 4, md: 6 }}>
+        {" "}
+        {/* REDUCED GAP TO RAISE CONTENT */}
         <Heading
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
-          color="#043a7b"
+          color="black"
           textAlign="center"
           fontFamily="poppins"
         >
           Our Mission & Vision
         </Heading>
-
         {/* Subheading */}
         <Text
           textAlign="center"
           maxW="700px"
           color="gray.600"
           fontSize={{ base: "lg", md: "xl" }}
-          mt={2} 
-          fontFamily="poppins"                   
+          mt={2}
+          fontFamily="poppins"
         >
           Guiding everything we do with purpose, clarity, and commitment.
         </Text>
       </VStack>
 
       {/* Content Container */}
-      <Box bg="#FFFFFF" py={{ base: 6, md: 12 }} w="100%">  {/* MOVED UP SLIGHTLY */}
+      <Box bg="#FFFFFF" py={{ base: 6, md: 12 }} w="100%">
+        {" "}
+        {/* MOVED UP SLIGHTLY */}
         <Box
-          bg="#043a7b"
+          bgGradient={"to-r"}
+          gradientFrom={"#000000ff"}
+          gradientTo={"#e60000ff"}
           p={{ base: 4, md: 8 }}
           borderRadius="2xl"
           boxShadow="lg"
           maxW="100%"
           mx="auto"
-
         >
           {/* Tabs */}
           <HStack justify="space-evenly" px={{ base: 2, md: 6 }} mb={10}>
@@ -78,21 +82,19 @@ const MissionVisionSection: React.FC = () => {
               >
                 <Circle
                   size={circleSize}
-                  bg={activeItem.id === item.id ? "#ee862a" : "white"}
+                  bg={activeItem.id === item.id ? "#e60000ff" : "white"}
                   border="2px solid white"
                   transition="all 0.3s ease"
                   _hover={{
                     transform: "scale(1.2)",
-                    bg: "#ee862a",
+                    bg: "#e60000ff",
                   }}
                 />
                 <Text
                   fontWeight="bold"
                   fontSize={{ base: "14px", md: "18px" }}
                   color="white"
-                  fontFamily="poppins" 
-                  
-                  
+                  fontFamily="poppins"
                 >
                   {item.title}
                 </Text>
@@ -111,11 +113,11 @@ const MissionVisionSection: React.FC = () => {
             <Box flex={1}>
               <Text
                 fontSize={{ base: "md", md: "20px" }}
-                color="#ee862a"
+                color="whiteAlpha.900"
                 fontWeight="bold"
                 mb={3}
                 textTransform="uppercase"
-                fontFamily="poppins" 
+                fontFamily="poppins"
               >
                 {activeItem.title}
               </Text>
@@ -126,9 +128,8 @@ const MissionVisionSection: React.FC = () => {
                 lineHeight="2"
               >
                 {activeItem.description.map((para, idx) => (
-                  <Text key={idx} mb={4}   fontFamily="poppins" >
+                  <Text key={idx} mb={4} fontFamily="poppins">
                     {para}
-                    
                   </Text>
                 ))}
               </Box>

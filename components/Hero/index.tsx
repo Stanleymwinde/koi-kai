@@ -130,9 +130,10 @@ const SwiperPage = () => {
                 position="absolute"
                 top={0}
                 left={0}
-                width="100%"
-                height="100%"
-                bg="rgba(0,0,0,0.45)"
+                w="100%"
+                h="100%"
+                bg="rgba(0, 0, 0, 0.25)"
+                zIndex={1}
               />
             </Box>
 
@@ -180,7 +181,7 @@ const SwiperPage = () => {
                   rounded="full"
                   fontWeight="bold"
                   fontSize={{ base: "sm", sm: "md", md: "lg" }}
-                  _hover={{ bg: "#00CAFF" }}
+                  _hover={{ bg: "#e60d0dff" }}
                 >
                   {index === 2 ? "Explore Funds" : "Start Investing"}
                 </Button>
