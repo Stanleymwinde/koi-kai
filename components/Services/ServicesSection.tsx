@@ -6,6 +6,8 @@ import {
   VStack,
   Heading,
   Text,
+  Image,
+  Button,
 } from "@chakra-ui/react";
 
 import {
@@ -22,6 +24,7 @@ const services = [
   {
     icon: FaHeart,
     title: "Medical Insurance",
+    image: "/images/med.jpeg",
     description:
       "We offer flexible and comprehensive medical insurance plans that protect individuals, families, and organizations from unexpected healthcare costs. Our covers are designed to provide peace of mind with reliable access to quality medical services.",
     includes: ["Individual Medical Cover", "Group Medical Cover"],
@@ -29,6 +32,7 @@ const services = [
   {
     icon: FaCar,
     title: "Motor Vehicle Insurance",
+    image: "/images/motor.jpg",
     description:
       "Whether for private or commercial use, our motor insurance plans safeguard your vehicle against accidents, theft, and unforeseen risks. Enjoy fast claims processing and dependable support whenever you're on the road.",
     includes: ["Private Motor", "Commercial Motor", "Special Motor Vehicles"],
@@ -36,6 +40,7 @@ const services = [
   {
     icon: FaShieldAlt,
     title: "WIBA & Employers' Liability",
+    image: "/images/wiba.jpg",
     description:
       "Ensure the safety and well-being of your workforce with statutory and additional protections. Our WIBA and EL covers shield employers from financial liabilities arising from workplace injuries or occupational illnesses—helping you remain compliant and secure.",
     includes: null,
@@ -43,6 +48,7 @@ const services = [
   {
     icon: FaBuilding,
     title: "Business & Asset Insurance",
+    image: "/images/business.jpeg",
     description:
       "Protect your business assets, property, and operations from risks that could interrupt your growth. Our business covers are designed for both SMEs and large enterprises, ensuring your investments remain secure.",
     includes: ["Fire & Special Perils", "Burglary", "All Risks", "Public Liability"],
@@ -50,6 +56,7 @@ const services = [
   {
     icon: FaUsers,
     title: "Life Insurance",
+    image: "/images/life-ins.jpg",
     description:
       "Preserve your family's future with life insurance solutions built for long-term security. Whether you're planning for your child's education or ensuring loved ones are protected, we offer plans that grow and support your financial goals.",
     includes: ["Whole Life Cover", "Education Plans", "Family Protection"],
@@ -57,6 +64,7 @@ const services = [
   {
     icon: FaPiggyBank,
     title: "Pension Covers",
+    image: "/images/pension.jpg",
     description:
       "Our pension solutions ensure you retire with confidence and dignity. Choose between regular income options or lump-sum benefits designed to support a comfortable life after work.",
     includes: null,
@@ -64,6 +72,7 @@ const services = [
   {
     icon: FaHardHat,
     title: "Contractors' All Risks",
+    image: "/images/business.jpeg",
     description:
       "Secure your construction projects from start to finish. Our CAR cover protects against damage to works, machinery, and materials on-site while also covering third-party liabilities, ensuring your projects run smoothly and safely.",
     includes: null,
@@ -97,37 +106,24 @@ const ServicesSection = () => {
         {services.map((service, index) => (
           <Box
             key={index}
-            bg="white"
             borderRadius="2xl"
             p={8}
             boxShadow="md"
-            position="relative"
-            overflow="hidden"
+            bg="white"
             transition="all 0.35s ease"
-            _before={{
-              content: '""',
-              position: "absolute",
-              inset: 0,
-              bg: "linear-gradient(135deg, rgba(230,0,0,0.12), rgba(0,0,0,0.08))",
-              opacity: 0,
-              transition: "0.4s",
-            }}
             _hover={{
-              _before: { opacity: 1 },
               transform: "translateY(-10px) scale(1.03)",
               boxShadow: "dark-lg",
             }}
           >
-            <VStack gap={4} align="start" position="relative" zIndex={2}>
-              <Box
-                as={service.icon}
-                boxSize="50px"
-                color="#e60000"
-                p={3}
+            <VStack gap={4} align="start">
+              
+              <Image
+                src={service.image}
+                alt={service.title}
                 borderRadius="full"
-                bg="rgba(230,0,0,0.15)"
-                transition="0.3s ease"
-                _hover={{ bg: "#e60000", color: "white" }}
+                boxSize="70px"
+                objectFit="cover"
               />
 
               <Heading fontSize="xl" color="black">
@@ -169,6 +165,20 @@ const ServicesSection = () => {
                   ))}
                 </VStack>
               )}
+
+              {/* Learn More Button */}
+              <Button
+                mt={4}
+                bg="#e60000"
+                color="white"
+                borderRadius="full"
+                px={6}
+                py={2}
+                fontSize="sm"
+                _hover={{ bg: "#b80000" }}
+              >
+                Learn More
+              </Button>
             </VStack>
           </Box>
         ))}
