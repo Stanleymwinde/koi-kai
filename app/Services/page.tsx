@@ -1,13 +1,17 @@
-import { Hero, ServicesSection, WhyChooseUs, CTAsection } from "@/components/Services";
+import {
+  Hero,
+  ServicesSection,
+  WhyChooseUs,
+  CTAsection,
+} from "@/components/Services";
 
 export default function AboutPage() {
   return (
     <main>
       <Hero />
-        <ServicesSection />
-        <WhyChooseUs />
-        <CTAsection />
-      
+      <ServicesSection />
+      <WhyChooseUs />
+      <CTAsection />
     </main>
   );
 }
