@@ -14,7 +14,7 @@ import { ArrowRight } from "lucide-react";
 const slider_content = [
   {
     title: "We Make Insurance Easy",
-    image: "/images/hero-bg.jpg",
+    image: "/images/v-prop.jpeg",
     subText: "Need Insurance?",
     highlight: "Ask Me - I CAN HELP!",
     desc: "Transforming insurance accessibility in Kenya. Everyone deserves protection.",

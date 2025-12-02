@@ -17,8 +17,7 @@ const HeroS: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bgImage="url('/images/cu.jpeg')"
-
+        bgImage="url('/images/contact-bg.jpeg')"
         bgSize="cover"
         bgPos="center"
         zIndex={0}
@@ -58,7 +57,7 @@ const HeroS: React.FC = () => {
           textShadow="0 2px 8px rgba(0, 0, 0, 0.5)"
           mb={4}
         >
-         Contact Us
+          Contact Us
         </Heading>
 
         <Text
@@ -69,7 +68,8 @@ const HeroS: React.FC = () => {
           textShadow="0 1px 4px rgba(0, 0, 0, 0.4)"
           opacity={0.95}
         >
-         Have questions about our insurance plans? Our team is here to help. Get in touch with us today. We look forward to assisting you!
+          Have questions about our insurance plans? Our team is here to help.
+          Get in touch with us today. We look forward to assisting you!
         </Text>
 
         {/* Buttons: stacked on mobile */}
@@ -83,7 +83,11 @@ const HeroS: React.FC = () => {
             color="white"
             w={{ base: "full", sm: "auto" }}
             bg="black"
-            _hover={{ bg: "#cc0000", transform: "translateY(-2px)", boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)" }}
+            _hover={{
+              bg: "#cc0000",
+              transform: "translateY(-2px)",
+              boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)",
+            }}
             _active={{ transform: "translateY(0)" }}
             size={{ base: "md", sm: "lg" }}
             py={{ base: 3, sm: 4 }}
@@ -101,7 +105,6 @@ const HeroS: React.FC = () => {
           >
             Get in Touch
           </Button>
-
         </HStack>
       </VStack>
     </Box>

@@ -17,8 +17,7 @@ const HeroSection: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bgImage="url('/images/aboutus.jpeg')"
-
+        bgImage="url('/images/about1-bg.jpeg')"
         bgSize="cover"
         bgPos="center"
         zIndex={0}
@@ -32,7 +31,6 @@ const HeroSection: React.FC = () => {
         w="100%"
         h="100%"
         bg="rgba(2, 2, 2, 0.35)"
-
         zIndex={1}
       />
       {/* Hero Content */}
@@ -85,7 +83,11 @@ const HeroSection: React.FC = () => {
             color="black"
             w={{ base: "full", sm: "auto" }}
             bg="white"
-            _hover={{ bg: "#cc0000", transform: "translateY(-2px)", boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)" }}
+            _hover={{
+              bg: "#cc0000",
+              transform: "translateY(-2px)",
+              boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)",
+            }}
             _active={{ transform: "translateY(0)" }}
             size={{ base: "md", sm: "lg" }}
             py={{ base: 3, sm: 4 }}
@@ -109,7 +111,11 @@ const HeroSection: React.FC = () => {
             color="white"
             w={{ base: "full", sm: "auto" }}
             bg="#e60000"
-            _hover={{ bg: "#cc0000", transform: "translateY(-2px)", boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)" }}
+            _hover={{
+              bg: "#cc0000",
+              transform: "translateY(-2px)",
+              boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)",
+            }}
             _active={{ transform: "translateY(0)" }}
             size={{ base: "md", sm: "lg" }}
             py={{ base: 3, sm: 4 }}
