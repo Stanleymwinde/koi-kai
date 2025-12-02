@@ -51,7 +51,7 @@ const services = [
     ],
   },
   {
-    image: "/icons/wiba-el-insurance.png",
+    image: "/images/wiba.jpeg",
     title: "W.I.B.A & E.L Covers",
     desc: "Work Injury Benefits Act and Employer's Liability protection.",
     icon: <Users size={26} color="#1A365D" />,
@@ -61,7 +61,7 @@ const services = [
     ],
   },
   {
-    image: "/icons/business-asset-insurance.png",
+    image: "/images/business.jpeg",
     title: "Business/Asset Insurance",
     desc: "Protect your business assets and operations.",
     icon: <Briefcase size={26} color="#1A365D" />,
@@ -83,7 +83,7 @@ const services = [
     ],
   },
   {
-    image: "/icons/pension-covers.png",
+    image: "/images/pension.jpeg",
     title: "Pension Covers",
     desc: "Plan for a secure retirement with our pension solutions.",
     icon: <TrendingUp size={26} color="#1A365D" />,
@@ -94,7 +94,7 @@ const services = [
     ],
   },
   {
-    image: "/icons/contractor-all-risks.png",
+    image: "/images/contractors.jpeg",
     title: "Contractor All Risks",
     desc: "Comprehensivre coverage for construction projects and contract works.",
     icon: <FaHelmetSafety size={26} color="#1A365D" />,
