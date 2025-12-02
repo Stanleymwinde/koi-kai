@@ -1,12 +1,6 @@
 "use client";
 
-import {
-  Box,
-  Text,
-  Heading,
-  VStack,
-  SimpleGrid,
-} from "@chakra-ui/react";
+import { Box, Text, Heading, VStack, SimpleGrid } from "@chakra-ui/react";
 import { BiBadgeCheck, BiLineChart } from "react-icons/bi";
 import { BsShieldCheck } from "react-icons/bs";
 import { FaUniversity } from "react-icons/fa";
@@ -27,8 +21,7 @@ const features = [
   {
     icon: <FaUniversity size={28} />,
     title: "Streamlined Claims",
-    description:
-      "Fast, transparent, and efficient claims processing.",
+    description: "Fast, transparent, and efficient claims processing.",
   },
   {
     icon: <BiLineChart size={28} />,
@@ -40,7 +33,6 @@ const features = [
 
 export default function WhyChooseUs() {
   return (
-
     <Box
       bgGradient={"to-r"}
       gradientFrom={"#000000ff"}
@@ -53,7 +45,6 @@ export default function WhyChooseUs() {
       mb={16}
       fontFamily="Poppins"
     >
-    
       {/* Heading + Subtext */}
       <VStack gap={6}>
         <Heading
@@ -64,18 +55,13 @@ export default function WhyChooseUs() {
           Why Choose Kai Insurance Agency
         </Heading>
 
-        <Text maxW="3xl" fontSize="md" color="gray.200">
+        <Text maxW="3xl" fontSize="lg" color="gray.200">
           Your trusted partner in securing what matters most.
         </Text>
       </VStack>
 
       {/* Feature Grid */}
-      <SimpleGrid
-        columns={[1, 2, 4]}
-        gap={10}
-        mt={12}
-        justifyContent="center"
-      >
+      <SimpleGrid columns={[1, 2, 4]} gap={10} mt={12} justifyContent="center">
         {features.map((feature, index) => (
           <Box key={index} textAlign="center">
             <VStack gap={4}>
@@ -96,7 +82,7 @@ export default function WhyChooseUs() {
 
               <Text
                 color="gray.300"
-                fontSize="sm"
+                fontSize="lg"
                 maxW="250px"
                 mx="auto"
                 lineHeight="1.6"
@@ -107,6 +93,27 @@ export default function WhyChooseUs() {
           </Box>
         ))}
       </SimpleGrid>
+      <Box mt={12} maxW="3xl" mx="auto" textAlign="center">
+        {" "}
+        <Heading fontSize={{ base: "xl", md: "2xl" }} fontWeight="bold" mb={4}>
+          Value Proposition
+        </Heading>
+        <Text
+          fontSize={{ base: "md", md: "xl" }}
+          lineHeight="tall"
+          mb={4}
+          textAlign={"center"}
+        >
+          What sets KAI Insurance Agency apart is our innovative, educative and
+          solution-based approach as an intermediary; harnessing the power of
+          great working relationships with underwriting partners to create a
+          seamless, accessible, and efficient experience for our mutual clients.
+        </Text>
+        <Text fontSize={{ base: "md", md: "xl" }} lineHeight="tall">
+          We are more than an insurance intermediary – we are a movement towards
+          a knowledgeable and more connected client base.
+        </Text>
+      </Box>
     </Box>
   );
 }

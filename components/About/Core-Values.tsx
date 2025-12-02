@@ -7,17 +7,10 @@ import {
   SimpleGrid,
   VStack,
   Button,
-  useDisclosure,
+  CloseButton,
+  Dialog,
+  Portal,
 } from "@chakra-ui/react";
-
-import {
-  Modal,
-  ModalOverlay,
-  ModalContent,
-  ModalHeader,
-  ModalBody,
-  ModalCloseButton,
-} from "@chakra-ui/modal";
 
 import { useState } from "react";
 
@@ -72,14 +65,7 @@ What It Looks Like in Practice:
 ];
 
 const CoreValuesSection = () => {
-  const { open, onOpen, onClose } = useDisclosure();
-
   const [selectedValue, setSelectedValue] = useState<any>(null);
-
-  const handleOpen = (value: any) => {
-    setSelectedValue(value);
-    onOpen();
-  };
 
   return (
     <Box
@@ -95,7 +81,6 @@ const CoreValuesSection = () => {
           fontWeight="bold"
           color="black"
           textAlign="center"
-          fontFamily="poppins"
         >
           Our Core Values
         </Heading>
@@ -105,7 +90,6 @@ const CoreValuesSection = () => {
           maxW="700px"
           color="gray.600"
           fontSize={{ base: "lg", md: "xl" }}
-          fontFamily="poppins"
         >
           The foundation of Kai Insurance is built on these values that guide
           how we serve our clients every day.
@@ -115,102 +99,119 @@ const CoreValuesSection = () => {
       {/* Values Grid */}
       <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} gap={{ base: 6, md: 10 }}>
         {coreValues.map((value, i) => (
-          <Box
-            key={value.title ?? i}
-            p={{ base: 6, md: 8 }}
-            borderRadius="2xl"
-            background="linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)"
-            border="1px solid"
-            borderColor="gray.100"
-            position="relative"
-            overflow="hidden"
-            transition="all 0.35s ease"
-            _hover={{
-              transform: "translateY(-8px) scale(1.02)",
-              boxShadow: "0px 18px 40px rgba(0, 0, 0, 0.12)",
-              borderColor: "#e60000ff",
-            }}
-          >
-            {/* Accent top bar */}
+          <Dialog.Root key={value.title ?? i}>
             <Box
-              position="absolute"
-              top="0"
-              left="0"
-              w="100%"
-              h="5px"
-              bg="linear-gradient(90deg, #e41919ff, #f00707ff)"
-              borderTopRadius="2xl"
-            />
-
-            {/* Glow */}
-            <Box
-              position="absolute"
-              top="0"
-              left="0"
-              width="100%"
-              height="100%"
-              bg="radial-gradient(circle at top right, rgba(236, 18, 18, 0.12), transparent 60%)"
-              pointerEvents="none"
-            />
-
-            {/* Content */}
-            <Text
-              fontWeight="bold"
-              fontSize={{ base: "lg", md: "xl" }}
-              mb={3}
-              color="#0A2233"
-              fontFamily="poppins"
+              p={{ base: 6, md: 8 }}
+              borderRadius="2xl"
+              background="linear-gradient(135deg, #ffffff 0%, #f8fafc 100%)"
+              border="1px solid"
+              borderColor="gray.100"
+              position="relative"
+              overflow="hidden"
+              transition="all 0.35s ease"
+              _hover={{
+                transform: "translateY(-8px) scale(1.02)",
+                boxShadow: "0px 18px 40px rgba(0, 0, 0, 0.12)",
+                borderColor: "#e60000ff",
+              }}
             >
-              {value.title}
-            </Text>
+              {/* Accent top bar */}
+              <Box
+                position="absolute"
+                top="0"
+                left="0"
+                w="100%"
+                h="5px"
+                bg="linear-gradient(90deg, #e41919ff, #f00707ff)"
+                borderTopRadius="2xl"
+              />
 
-            <Text
-              color="gray.600"
-              fontSize={{ base: "sm", md: "md" }}
-              lineHeight="1.75"
-              fontFamily="poppins"
-            >
-              {value.description}
-            </Text>
+              {/* Glow */}
+              <Box
+                position="absolute"
+                top="0"
+                left="0"
+                width="100%"
+                height="100%"
+                bg="radial-gradient(circle at top right, rgba(236, 18, 18, 0.12), transparent 60%)"
+                pointerEvents="none"
+              />
 
-            <Button
-              mt={4}
-              size="sm"
-              colorScheme="red"
-              variant="outline"
-              onClick={() => handleOpen(value)}
-            >
-              Read More
-            </Button>
-          </Box>
+              {/* Content */}
+              <Text
+                fontWeight="bold"
+                fontSize={{ base: "lg", md: "xl" }}
+                mb={3}
+                color="#0A2233"
+              >
+                {value.title}
+              </Text>
+
+              <Text
+                color="gray.600"
+                fontSize={{ base: "sm", md: "md" }}
+                lineHeight="1.75"
+              >
+                {value.description}
+              </Text>
+
+              <Dialog.Trigger asChild>
+                <Button
+                  mt={4}
+                  size="sm"
+                  colorScheme="red"
+                  variant="outline"
+                  onClick={() => setSelectedValue(value)}
+                >
+                  Read More
+                </Button>
+              </Dialog.Trigger>
+            </Box>
+
+            {/* Dialog */}
+            <Portal>
+              <Dialog.Backdrop bg="blackAlpha.700" />
+              <Dialog.Positioner>
+                <Dialog.Content bg="transparent" boxShadow="none" p={0}>
+                  <Box
+                    bgGradient="linear(to-r, #e60000, #000)"
+                    p="2px"
+                    borderRadius="xl"
+                  >
+                    <Box bg="white" borderRadius="xl" p={{ base: 4, md: 6 }}>
+                      <Dialog.Header>
+                        <Dialog.Title fontWeight="bold">
+                          {selectedValue?.title}
+                        </Dialog.Title>
+                      </Dialog.Header>
+
+                      <Dialog.Body>
+                        <Text
+                          whiteSpace="pre-line"
+                          fontSize="md"
+                          color="gray.800"
+                          lineHeight="1.8"
+                        >
+                          {selectedValue?.details ?? selectedValue?.description}
+                        </Text>
+                      </Dialog.Body>
+
+                      <Dialog.CloseTrigger asChild>
+                        <CloseButton
+                          size="sm"
+                          position="absolute"
+                          top="10px"
+                          right="10px"
+                        />
+                      </Dialog.CloseTrigger>
+                    </Box>
+                  </Box>
+                </Dialog.Content>
+              </Dialog.Positioner>
+            </Portal>
+          </Dialog.Root>
         ))}
       </SimpleGrid>
-      {/* Modal */}
-      <Modal isOpen={open} onClose={onClose} size="lg" isCentered>
-        <ModalOverlay bg="blackAlpha.700" zIndex={1400} />
-        <ModalContent bg="transparent" boxShadow="none" p={0} zIndex={1500}>
-          {/* Gradient border wrapper */}
-          <Box bgGradient="linear(to-r, #e60000, #000)" p="2px" borderRadius="xl">
-            <Box bg="white" borderRadius="xl" p={{ base: 4, md: 6 }}>
-              <ModalCloseButton />
-              <ModalHeader fontFamily="poppins" fontWeight="bold" pt={2} pb={2}>
-                {selectedValue?.title}
-              </ModalHeader>
-              <ModalBody>
-                <Text
-                  whiteSpace="pre-line"
-                  fontSize="md"
-                  color="gray.800"
-                  lineHeight="1.8"
-                  fontFamily="poppins"
-                >
-                  {selectedValue?.details ?? selectedValue?.description}
-                </Text>
-              </ModalBody>
-            </Box>
-          </Box>
-        </ModalContent>
-      </Modal>
     </Box>
   );
 };

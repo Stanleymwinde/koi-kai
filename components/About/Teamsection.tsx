@@ -60,12 +60,12 @@ const TeamSection: React.FC = () => {
               image="/images/CEE.png"
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
-            <TeamMemberCard
+            {/* <TeamMemberCard
               name="Mary Johnson"
               title="Client Relations Manager"
               image="/images/BEE.png"
               linkedin="#"
-            />
+            /> */}
           </SimpleGrid>
         </Box>
       </Container>

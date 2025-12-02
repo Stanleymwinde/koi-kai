@@ -18,14 +18,13 @@ const page = () => {
       <Services />
       <AboutUs />
       <CoreValues />
-      <ValueProposition />
+
       <WhyChooseUs />
-      <Team />
+      {/* <Team /> */}
       <div id="contact">
         <Contact />
-        
-        <CTAsection />
 
+        <CTAsection />
       </div>
     </>
   );

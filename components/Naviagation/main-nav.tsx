@@ -8,15 +8,12 @@ import {
   Link as ChakraLink,
   Menu,
   Portal,
-  ClientOnly,
-  Skeleton,
   IconButton,
   Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
-
-import { LuChevronDown, LuMoon, LuSun } from "react-icons/lu";
+import { LuChevronDown } from "react-icons/lu";
 import { useState } from "react";
 import MobileNav from "./mobile-nav";
 import { useColorMode } from "../ui/color-mode";
@@ -37,14 +34,17 @@ const MainNav = () => {
       top={0}
       left={0}
       right={0}
-      zIndex={5}
-      bg="rgba(255,255,255,0.25)"
+      zIndex={50}
+      // bg="rgba(0,0,0,0.4)"
+      bgGradient={"to-r"}
+      gradientFrom={"#000000ff"}
+      gradientTo={"#510101ff"}
       style={{
-        backdropFilter: "saturate(180%) blur(8px)",
-        WebkitBackdropFilter: "saturate(180%) blur(8px)",
+        backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
       }}
       borderBottomWidth="1px"
-      borderBottomColor="rgba(0,0,0,0.06)"
+      borderBottomColor="rgba(255,255,255,0.1)"
     >
       {/* Logo */}
       <ChakraLink as={NextLink} href="/">
@@ -78,13 +78,15 @@ const MainNav = () => {
                     as={NextLink}
                     href={item.href || "#"}
                     _hover={{ textDecoration: "none" }}
-                    bg={"gray.300"}
                   >
                     <Button
-                      variant="ghost"
+                      bg="rgba(255,255,255,0.15)"
+                      style={{
+                        backdropFilter: "blur(8px)",
+                        WebkitBackdropFilter: "blur(8px)",
+                      }}
                       fontWeight="semibold"
                       fontSize={{ base: "sm", md: "md" }}
-                      transition="color 0.15s"
                     >
                       {item.label}
                       {hasChildren && (
@@ -96,6 +98,7 @@ const MainNav = () => {
                   </ChakraLink>
                 </Menu.Trigger>
 
+                {/* Dropdown */}
                 {hasChildren && (
                   <Portal>
                     <Menu.Positioner>
@@ -105,7 +108,7 @@ const MainNav = () => {
                         minW="200px"
                         shadow="md"
                       >
-                        {item.children.map((child: any, j: any) => (
+                        {item.children.map((child: any, j: number) => (
                           <Menu.Item
                             asChild
                             key={j}
@@ -115,13 +118,13 @@ const MainNav = () => {
                             <ChakraLink
                               as={NextLink}
                               href={child.href}
-                              px={4} // horizontal padding
-                              py={2} // vertical padding
+                              px={4}
+                              py={2}
                               display="block"
                               fontSize="sm"
                               fontWeight="medium"
-                              mb={1} // spacing between links
-                              _hover={{ bg: "gray.100" }} // hover effect
+                              mb={1}
+                              _hover={{ bg: "gray.100" }}
                               onClick={(e) => {
                                 if (typeof window !== "undefined") {
                                   const currentPath = window.location.pathname;
@@ -166,7 +169,6 @@ const MainNav = () => {
             bgGradient="to-r"
             gradientFrom={"#000000ff"}
             gradientTo={"#e60000ff"}
-            _hover={{ bg: "cyan.600" }}
           >
             GET A QUOTE
           </Button>

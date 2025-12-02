@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -17,28 +17,28 @@ const slider_content = [
     image: "/images/hero-bg.jpg",
     subText: "Need Insurance?",
     highlight: "Ask Me - I CAN HELP!",
-    desc: "Transforming insurance accessibility in Kenya. Everyone deserves access to the insurance covers they need.",
+    desc: "Transforming insurance accessibility in Kenya. Everyone deserves protection.",
   },
   {
     title: "Your Peace of Mind Matters",
     image: "/images/isk112.jpeg",
     subText: "Looking for Coverage?",
     highlight: "Let Me Guide You!",
-    desc: "Whether it's health, motor, or life insurance — I simplify everything for you.",
+    desc: "Health, motor, or life — I simplify everything.",
   },
   {
     title: "Affordable & Reliable Coverage",
     image: "/images/isk98.jpeg",
     subText: "Need Something Quick?",
     highlight: "I'm Here To Assist!",
-    desc: "Fast, seamless, and transparent insurance services tailored for you.",
+    desc: "Fast, seamless, transparent insurance services.",
   },
   {
     title: "Fast, Transparent Insurance Solutions",
     image: "/images/isk136.jpeg",
     subText: "Tired of Complicated Processes?",
     highlight: "I'm Here To Assist!",
-    desc: "Transparent insurance solutions made simple and accessible for all.",
+    desc: "Transparent insurance solutions made simple.",
   },
 ];
 
@@ -54,13 +54,11 @@ const HeroSwiper = () => {
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-    }
+    if (element) element.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
-    <Box position="relative" id="home">
+    <Box position="relative" id="home" pt={{ base: 24, md: "90px" }}>
       <Swiper
         spaceBetween={0}
         centeredSlides={true}
@@ -78,8 +76,9 @@ const HeroSwiper = () => {
               alignItems="center"
               justifyContent="center"
               overflow="hidden"
+              pt={{ base: 24, md: 32 }} // <-- FIX for navbar
             >
-              {/* Background Image */}
+              {/* Background */}
               <Box position="absolute" inset={0} zIndex={0}>
                 <Image
                   src={item.image}
@@ -88,14 +87,10 @@ const HeroSwiper = () => {
                   style={{ objectFit: "cover" }}
                   priority
                 />
-                <Box
-                  position="absolute"
-                  inset={0}
-                  bg="rgba(0, 0, 0, 0.6)" // ⭐ Changed overlay to black
-                />
+                <Box position="absolute" inset={0} bg="rgba(0,0,0,0.6)" />
               </Box>
 
-              {/* Content */}
+              {/* Text Content */}
               <VStack gap={4} textAlign="center" px={4} zIndex={4} maxW="700px">
                 <Heading
                   fontSize={{ base: "3xl", md: "5xl", lg: "6xl" }}

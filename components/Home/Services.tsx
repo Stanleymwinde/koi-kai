@@ -12,6 +12,8 @@ import {
   ListItem,
   Card,
   CardBody,
+  Image,
+  Button,
 } from "@chakra-ui/react";
 import { CheckCircle } from "lucide-react";
 import { Heart, Car, Users, Briefcase, Shield, TrendingUp } from "lucide-react";
@@ -20,6 +22,7 @@ import { FaHelmetSafety } from "react-icons/fa6";
 
 const services = [
   {
+    image: "/images/health.jpeg",
     title: "Medical Insurance",
     desc: "Corporate, individual, and SME medical covers tailored to your needs.",
     icon: <Heart size={26} color="#1A365D" />,
@@ -30,6 +33,14 @@ const services = [
     ],
   },
   {
+    image: "/images/hero-bg2.jpeg",
+    title: "Marine Insurance",
+    desc: "Comprehensive marine insurance solutions for all your shipping needs.",
+    icon: <Shield size={26} color="#1A365D" />,
+    items: ["Cargo Insurance", "Hull Insurance", "Liability Insurance"],
+  },
+  {
+    image: "/images/car.jpeg",
     title: "Motor Vehicle Insurance",
     desc: "Comprehensive coverage for all types of vehicles.",
     icon: <Car size={26} color="#1A365D" />,
@@ -40,6 +51,7 @@ const services = [
     ],
   },
   {
+    image: "/icons/wiba-el-insurance.png",
     title: "W.I.B.A & E.L Covers",
     desc: "Work Injury Benefits Act and Employer's Liability protection.",
     icon: <Users size={26} color="#1A365D" />,
@@ -49,6 +61,7 @@ const services = [
     ],
   },
   {
+    image: "/icons/business-asset-insurance.png",
     title: "Business/Asset Insurance",
     desc: "Protect your business assets and operations.",
     icon: <Briefcase size={26} color="#1A365D" />,
@@ -59,6 +72,7 @@ const services = [
     ],
   },
   {
+    image: "/images/life.jpeg",
     title: "Life Insurance",
     desc: "Secure your family's future with comprehensive life coverage.",
     icon: <Shield size={26} color="#1A365D" />,
@@ -69,6 +83,7 @@ const services = [
     ],
   },
   {
+    image: "/icons/pension-covers.png",
     title: "Pension Covers",
     desc: "Plan for a secure retirement with our pension solutions.",
     icon: <TrendingUp size={26} color="#1A365D" />,
@@ -79,6 +94,7 @@ const services = [
     ],
   },
   {
+    image: "/icons/contractor-all-risks.png",
     title: "Contractor All Risks",
     desc: "Comprehensivre coverage for construction projects and contract works.",
     icon: <FaHelmetSafety size={26} color="#1A365D" />,
@@ -132,39 +148,68 @@ const Services = () => {
               cursor: "pointer",
             }}
           >
-            <CardBody>
-              <Flex
-                bg="gray.100"
-                w="48px"
-                h="48px"
-                borderRadius="md"
-                align="center"
-                justify="center"
-                mb={4}
-              >
-                {srv.icon}
-              </Flex>
+            <CardBody
+              position="relative"
+              overflow="hidden"
+              minH={"350px"}
+              borderRadius={"xl"}
+            >
+              {/* Background Image Layer */}
+              <Box
+                position="absolute"
+                top={0}
+                left={0}
+                w="100%"
+                h="100%"
+                backgroundImage={`url(${srv.image})`}
+                backgroundSize="cover"
+                backgroundPosition="center"
+                filter="blur(0.4px)"
+                transform="scale(1.1)"
+                zIndex={0}
+              />
 
-              <VStack align="start" gap={3}>
-                <Heading fontSize="xl" fontWeight="semibold">
-                  {srv.title}
-                </Heading>
+              {/* Dark Overlay */}
+              <Box
+                position="absolute"
+                top={0}
+                left={0}
+                w="100%"
+                h="100%"
+                bg="blackAlpha.600"
+                zIndex={0}
+              />
 
-                <Text color="gray.600" fontSize="sm">
-                  {srv.desc}
-                </Text>
+              {/* Foreground Content */}
+              <Box position="relative" zIndex={1} color="white" h="100%">
+                <VStack align="start" gap={3} pb="60px">
+                  <Heading fontSize="2xl" fontWeight="semibold">
+                    {srv.title}
+                  </Heading>
 
-                <Box as="ol" gap={1}>
-                  {srv.items.map((item, idx) => (
-                    <Box key={idx} display="flex" alignItems="center" gap={2}>
-                      <CheckCircle color="green.400" />
-                      <Text fontSize="sm" lineHeight={"tall"}>
-                        {item}
-                      </Text>
-                    </Box>
-                  ))}
+                  <Text fontSize="lg" opacity={0.8}>
+                    {srv.desc}
+                  </Text>
+
+                  <Box as="ol" gap={1}>
+                    {srv.items.map((item, idx) => (
+                      <Box key={idx} display="flex" alignItems="center" gap={2}>
+                        <CheckCircle color="green.300" />
+                        <Text fontSize="lg" lineHeight="tall">
+                          {item}
+                        </Text>
+                      </Box>
+                    ))}
+                  </Box>
+                </VStack>
+
+                {/* Bottom-left Button */}
+                <Box position="absolute" bottom="20px" left="20px">
+                  <Button variant="solid" colorScheme="yellow">
+                    Read More
+                  </Button>
                 </Box>
-              </VStack>
+              </Box>
             </CardBody>
           </Card.Root>
         ))}
