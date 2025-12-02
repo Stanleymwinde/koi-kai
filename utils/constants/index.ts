@@ -14,12 +14,12 @@ export const navItems = [
     // ],
   },
   {
-    label: "Services",
-    href: "/Services",
-  },
-  {
     label: "About",
     href: "/AboutUs",
+  },
+  {
+    label: "Services",
+    href: "/Services",
   },
   {
     label: "Contact",
@@ -147,8 +147,7 @@ export const missionVisionData = [
     image: "/images/missioni.jpeg",
     description: [
       "Kai Insurance Agency’s mission is to provide accessible, reliable, and customer-centered insurance solutions that protect individuals, families, and businesses against life’s uncertainties. We are committed to simplifying the insurance process through transparency, expertise, and personalized service, ensuring that every client receives the right coverage for their unique needs. With integrity at the core of our operations, Kai Insurance Agency strives to deliver fast, fair, and efficient support; especially during claims to give customers peace of mind and long-term financial security.",
-     
-    ]
+    ],
   },
   {
     id: "vision",
@@ -156,9 +155,8 @@ export const missionVisionData = [
     image: "/images/vision.jpeg",
     description: [
       "Kai Insurance Agency envisions becoming one of the most trusted and innovative insurance partners in the region, known for setting new standards in service excellence, claims reliability, and client education. Our goal is to empower more people to make confident financial decisions by offering insurance solutions that evolve with changing risks, technologies, and customer expectations. Through continuous improvement and strong relationships with underwriting partners, Kai Insurance Agency aims to create a safer, more secure future for all the clients and communities we serve.",
-    
-    ]
-  }
+    ],
+  },
 ];
 
 export const FaqsData = [
@@ -183,4 +181,3 @@ export const FaqsData = [
     text: "We are based at Millenium business park on Langata-Karen Rd - 2nd Floor Nairobi, Kenya. You can also find us on Google Maps for easy directions.",
   },
 ];
-

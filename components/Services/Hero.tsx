@@ -9,6 +9,7 @@ const Hero: React.FC = () => {
       w="100%"
       h={{ base: "70vh", sm: "80vh", md: "100vh" }}
       overflow="hidden"
+      mt={{ base: 0, md: 14 }}
     >
       {/* Background Image */}
       <Box
@@ -17,7 +18,7 @@ const Hero: React.FC = () => {
         left={0}
         w="100%"
         h="100%"
-        bgImage="url('/images/hero-bg.jpg')" 
+        bgImage="url('/images/risk.jpeg')"
         bgSize="cover"
         bgPos="center"
         zIndex={0}
@@ -49,7 +50,7 @@ const Hero: React.FC = () => {
         fontFamily="Poppins"
         maxW={{ base: "100%", md: "60%" }}
       >
-         <Heading
+        <Heading
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
           fontWeight="bold"
           color="#FFFFFF"
