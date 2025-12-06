@@ -42,17 +42,17 @@ const TeamSection: React.FC = () => {
             gap={{ base: 6, md: 10 }}
             justifyItems="center"
           >
-            <TeamMemberCard
+            {/* <TeamMemberCard
               name="Priscilla Ngirichi"
               title="Chief Executive Officer"
               image="/images/Kui-bw.jpg"
               linkedin="#"
-            />
+            /> */}
             <TeamMemberCard
-              name="Priscilla Ngirichi"
-              title="Chief Executive Officer"
-              image="/images/DEE.png"
-              linkedin="#"
+              name="Lilian Ngirichi"
+              title="Head of Strategy"
+              image="/images/lily.jpg"
+              linkedin="https://www.linkedin.com/in/lilian-ngirichi-00864a23/"
             />
             <TeamMemberCard
               name="John Smith"
@@ -60,12 +60,12 @@ const TeamSection: React.FC = () => {
               image="/images/CEE.png"
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
-            {/* <TeamMemberCard
-              name="Mary Johnson"
-              title="Client Relations Manager"
-              image="/images/BEE.png"
-              linkedin="#"
-            /> */}
+            <TeamMemberCard
+              name="Stanley Mwinde"
+              title="IT Consultant"
+              image="/images/Stan.jpg"
+              linkedin="https://www.linkedin.com/in/stanley-mwinde-9b27651a2/"
+            />
           </SimpleGrid>
         </Box>
       </Container>

@@ -1,5 +1,9 @@
-
-import { HeroSection, MissionVisionSection, Teamsection } from "@/components/About";
+import {
+  HeroSection,
+  Kui,
+  MissionVisionSection,
+  Teamsection,
+} from "@/components/About";
 import CoreValues from "@/components/About/Core-Values";
 import { CTAsection } from "@/components/Services";
 
@@ -9,10 +13,9 @@ export default function AboutPage() {
       <HeroSection />
       <MissionVisionSection />
       <CoreValues />
+      <Kui />
       <Teamsection />
       <CTAsection />
-    
     </main>
   );
 }
-
