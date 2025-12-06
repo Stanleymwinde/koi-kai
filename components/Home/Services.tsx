@@ -14,16 +14,19 @@ import {
   CardBody,
   Image,
   Button,
+  Link,
 } from "@chakra-ui/react";
 import { CheckCircle } from "lucide-react";
 import { Heart, Car, Users, Briefcase, Shield, TrendingUp } from "lucide-react";
 import { useColorMode } from "../ui/color-mode";
 import { FaHelmetSafety } from "react-icons/fa6";
+import { info } from "console";
 
 const services = [
   {
     image: "/images/health.jpeg",
     title: "Medical Insurance",
+    slug: "medical-insurance",
     desc: "Corporate, individual, and SME medical covers tailored to your needs.",
     icon: <Heart size={26} color="#1A365D" />,
     items: [
@@ -35,6 +38,7 @@ const services = [
   {
     image: "/images/hero-bg2.jpeg",
     title: "Marine Insurance",
+    slug: "marine-insurance",
     desc: "Comprehensive marine insurance solutions for all your shipping needs.",
     icon: <Shield size={26} color="#1A365D" />,
     items: ["Cargo Insurance", "Hull Insurance", "Liability Insurance"],
@@ -42,6 +46,7 @@ const services = [
   {
     image: "/images/car.jpeg",
     title: "Motor Vehicle Insurance",
+    slug: "motor-vehicle-insurance",
     desc: "Comprehensive coverage for all types of vehicles.",
     icon: <Car size={26} color="#1A365D" />,
     items: [
@@ -53,6 +58,7 @@ const services = [
   {
     image: "/images/wiba.jpeg",
     title: "W.I.B.A & E.L Covers",
+    slug: "wiba-employers-liability",
     desc: "Work Injury Benefits Act and Employer's Liability protection.",
     icon: <Users size={26} color="#1A365D" />,
     items: [
@@ -63,6 +69,7 @@ const services = [
   {
     image: "/images/business.jpeg",
     title: "Business/Asset Insurance",
+    slug: "business-asset-insurance",
     desc: "Protect your business assets and operations.",
     icon: <Briefcase size={26} color="#1A365D" />,
     items: [
@@ -72,8 +79,9 @@ const services = [
     ],
   },
   {
-    image: "/images/life.jpeg",
+    image: "/images/new-life.jpeg",
     title: "Life Insurance",
+    slug: "life-insurance",
     desc: "Secure your family's future with comprehensive life coverage.",
     icon: <Shield size={26} color="#1A365D" />,
     items: [
@@ -85,6 +93,7 @@ const services = [
   {
     image: "/images/pension.jpeg",
     title: "Pension Covers",
+    slug: "pension-covers",
     desc: "Plan for a secure retirement with our pension solutions.",
     icon: <TrendingUp size={26} color="#1A365D" />,
     items: [
@@ -96,7 +105,8 @@ const services = [
   {
     image: "/images/contractors.jpeg",
     title: "Contractor All Risks",
-    desc: "Comprehensivre coverage for construction projects and contract works.",
+    slug: "contractors-all-risks",
+    desc: "Comprehensive coverage for construction projects and contract works.",
     icon: <FaHelmetSafety size={26} color="#1A365D" />,
     items: [
       "Contract Works Coverage",
@@ -204,11 +214,17 @@ const Services = () => {
                 </VStack>
 
                 {/* Bottom-left Button */}
-                <Box position="absolute" bottom="20px" left="20px">
-                  <Button variant="solid" colorScheme="yellow">
-                    Read More
-                  </Button>
-                </Box>
+                <Link
+                  href={`/Services/${srv.title
+                    .toLowerCase()
+                    .replace(/[^a-z0-9]+/g, "-")}`}
+                >
+                  <Box position="absolute" bottom="20px" left="20px">
+                    <Button variant="solid" colorScheme="yellow">
+                      Read More
+                    </Button>
+                  </Box>
+                </Link>
               </Box>
             </CardBody>
           </Card.Root>

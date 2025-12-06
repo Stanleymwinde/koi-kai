@@ -4,6 +4,8 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { Provider } from "@/components/ui/provider";
 import Navigation from "@/components/Naviagation";
 import Footer from "@/components/common/Footer";
+import { FloatingWhatsApp } from "react-floating-whatsapp";
+import WhatsApp from "@/components/common/WhatsApp";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,6 +34,7 @@ export default function RootLayout({
         <Provider>
           <Navigation />
           {children}
+          <WhatsApp />
           <Footer />
         </Provider>
       </body>

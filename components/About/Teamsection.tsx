@@ -55,8 +55,8 @@ const TeamSection: React.FC = () => {
               linkedin="https://www.linkedin.com/in/lilian-ngirichi-00864a23/"
             />
             <TeamMemberCard
-              name="John Smith"
-              title="Head of Operations"
+              name="James Kamau"
+              title="Finance"
               image="/images/CEE.png"
               linkedin="https://www.linkedin.com/in/pius-muchiri-cfa-0619392a/"
             />
