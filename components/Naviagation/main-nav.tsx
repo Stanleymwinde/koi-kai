@@ -8,58 +8,58 @@ import {
   Link as ChakraLink,
   Menu,
   Portal,
-  IconButton,
-  Text,
 } from "@chakra-ui/react";
 import Image from "next/image";
 import NextLink from "next/link";
 import { LuChevronDown } from "react-icons/lu";
 import { useState } from "react";
 import MobileNav from "./mobile-nav";
-import { useColorMode } from "../ui/color-mode";
+
+const NAV_HEIGHT = { base: "64px", md: "80px" };
 
 const MainNav = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const { toggleColorMode, colorMode } = useColorMode();
 
   return (
     <Flex
-      py={2}
-      justify="space-between"
+      h={NAV_HEIGHT}
       px={{ base: 4, md: 10 }}
       align="center"
-      boxShadow="sm"
-      wrap="wrap"
+      justify="space-between"
       position="fixed"
       top={0}
       left={0}
       right={0}
-      zIndex={50}
-      // bg="rgba(0,0,0,0.4)"
-      bgGradient={"to-r"}
-      gradientFrom={"#000000ff"}
-      gradientTo={"#510101ff"}
+      zIndex={100}
+      bgGradient="to-r"
+      gradientFrom="#000000ff"
+      gradientTo="#510101ff"
       style={{
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
       }}
-      borderBottomWidth="1px"
-      borderBottomColor="rgba(255,255,255,0.1)"
+      borderBottom="1px solid rgba(255,255,255,0.1)"
     >
       {/* Logo */}
-      <ChakraLink as={NextLink} href="/">
-        <Image src={"/images/logo.png"} alt="Logo" width={80} height={50} />
+      <ChakraLink as={NextLink} href="/" flexShrink={0}>
+        <Image
+          src="/images/logo.png"
+          alt="Logo"
+          width={72}
+          height={44}
+          style={{ objectFit: "contain" }}
+        />
       </ChakraLink>
 
-      {/* Desktop Nav Links */}
+      {/* Desktop Navigation */}
       <HStack
         as="nav"
-        gap={3}
-        align="center"
+        gap={2}
         display={{ base: "none", md: "flex" }}
+        align="center"
       >
-        {(navItems as any[]).map((item, i) => {
-          const hasChildren = item.children && item.children.length > 0;
+        {navItems.map((item, i) => {
+          // const hasChildren = item.children?.length > 0;
           const isOpen = openIndex === i;
 
           return (
@@ -69,52 +69,39 @@ const MainNav = () => {
               onOpenChange={(open) => setOpenIndex(open ? i : null)}
             >
               <Box
-                position="relative"
-                onMouseEnter={() => hasChildren && setOpenIndex(i)}
-                onMouseLeave={() => hasChildren && setOpenIndex(null)}
+              // onMouseEnter={() => hasChildren && setOpenIndex(i)}
+              // onMouseLeave={() => hasChildren && setOpenIndex(null)}
               >
                 <Menu.Trigger asChild>
-                  <ChakraLink
-                    as={NextLink}
-                    href={item.href || "#"}
-                    _hover={{ textDecoration: "none" }}
-                  >
+                  <ChakraLink as={NextLink} href={item.href || "#"}>
                     <Button
-                      bg="rgba(255,255,255,0.15)"
-                      style={{
-                        backdropFilter: "blur(8px)",
-                        WebkitBackdropFilter: "blur(8px)",
-                      }}
-                      fontWeight="semibold"
-                      fontSize={{ base: "sm", md: "md" }}
+                      size="sm"
+                      fontWeight="medium"
+                      bg="rgba(255,255,255,0.12)"
+                      color="white"
+                      _hover={{ bg: "rgba(255,255,255,0.25)" }}
                     >
                       {item.label}
-                      {hasChildren && (
+                      {/* {hasChildren && (
                         <Box as="span" ml={1} display="inline-flex">
                           <LuChevronDown />
                         </Box>
-                      )}
+                      )} */}
                     </Button>
                   </ChakraLink>
                 </Menu.Trigger>
 
-                {/* Dropdown */}
-                {hasChildren && (
+                {/* {hasChildren && (
                   <Portal>
                     <Menu.Positioner>
                       <Menu.Content
-                        rounded="md"
-                        py={2}
                         minW="200px"
-                        shadow="md"
+                        py={2}
+                        rounded="md"
+                        shadow="lg"
                       >
-                        {item.children.map((child: any, j: number) => (
-                          <Menu.Item
-                            asChild
-                            key={j}
-                            value={child.label}
-                            cursor="pointer"
-                          >
+                        {item.children.map((child, j) => (
+                          <Menu.Item key={j} asChild value={child.label}>
                             <ChakraLink
                               as={NextLink}
                               href={child.href}
@@ -122,28 +109,7 @@ const MainNav = () => {
                               py={2}
                               display="block"
                               fontSize="sm"
-                              fontWeight="medium"
-                              mb={1}
                               _hover={{ bg: "gray.100" }}
-                              onClick={(e) => {
-                                if (typeof window !== "undefined") {
-                                  const currentPath = window.location.pathname;
-                                  const [targetPath, hash] = (
-                                    child.href || ""
-                                  ).split("#");
-
-                                  if (currentPath === targetPath && hash) {
-                                    e.preventDefault();
-                                    const el = document.getElementById(hash);
-                                    if (el) {
-                                      el.scrollIntoView({
-                                        behavior: "smooth",
-                                        block: "start",
-                                      });
-                                    }
-                                  }
-                                }
-                              }}
                             >
                               {child.label}
                             </ChakraLink>
@@ -152,30 +118,32 @@ const MainNav = () => {
                       </Menu.Content>
                     </Menu.Positioner>
                   </Portal>
-                )}
+                )} */}
               </Box>
             </Menu.Root>
           );
         })}
       </HStack>
 
-      {/* Desktop Buttons */}
-      <HStack gap={3} display={{ base: "none", md: "flex" }}>
+      {/* Desktop CTA */}
+      <HStack display={{ base: "none", md: "flex" }}>
         <ChakraLink as={NextLink} href="/#contact">
           <Button
-            borderRadius="xl"
+            size="sm"
+            px={6}
             fontWeight="semibold"
-            size={{ base: "sm", lg: "md" }}
+            borderRadius="xl"
             bgGradient="to-r"
-            gradientFrom={"#000000ff"}
-            gradientTo={"#e60000ff"}
+            gradientFrom="#000000ff"
+            gradientTo="#e60000ff"
+            _hover={{ opacity: 0.9 }}
           >
             GET A QUOTE
           </Button>
         </ChakraLink>
       </HStack>
 
-      {/* Mobile Nav */}
+      {/* Mobile Menu */}
       <Box display={{ base: "flex", md: "none" }}>
         <MobileNav />
       </Box>

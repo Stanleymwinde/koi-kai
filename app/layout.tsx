@@ -6,6 +6,8 @@ import Navigation from "@/components/Naviagation";
 import Footer from "@/components/common/Footer";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import WhatsApp from "@/components/common/WhatsApp";
+import NextTopLoader from "nextjs-toploader";
+import { Box } from "@chakra-ui/react";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -32,7 +34,10 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <Provider>
+          <NextTopLoader color="red" />
           <Navigation />
+          <Box h={{ base: "40px", md: "50px" }} />
+
           {children}
           <WhatsApp />
           <Footer />

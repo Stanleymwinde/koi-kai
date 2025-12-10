@@ -171,23 +171,83 @@ export const missionVisionData = [
 export const FaqsData = [
   {
     value: "a",
-    title: "What are your business hours?​",
-    text: "Our offices are open Monday to Friday, 8:30 AM – 5:00 PM. We are closed on weekends and public holidays.​",
+    title: "What types of insurance products are available in Kenya?",
+    text: "Motor, medical, life, travel, home, personal accident, agriculture, business, and education insurance policies are available in Kenya.",
   },
   {
     value: "b",
-    title: "How long does it take to process a claim?​",
-    text: "Claims are typically processed within 5–10 business days, depending on the type and complexity of the claim.​",
+    title: "What is an insurance premium?",
+    text: "An insurance premium is the amount you pay—monthly, quarterly, or annually—to keep your insurance policy active.",
   },
   {
     value: "c",
-    title: "Do I need to visit your office to get a quote?",
-    text: "No, you can request a quote directly through our website or by contacting our support team via phone or email.",
+    title: "What is an excess in insurance?",
+    text: "Excess is the portion of a loss that you pay out of pocket before the insurer settles the remaining amount.",
   },
   {
     value: "d",
-    title: "Where are you located?",
-    text: "We are based at Millenium business park on Langata-Karen Rd - 2nd Floor Nairobi, Kenya. You can also find us on Google Maps for easy directions.",
+    title: "What documents are required to buy insurance?",
+    text: "You will need a National ID or Passport, KRA PIN, a completed application form, and any product-specific documents required by the insurer.",
+  },
+  {
+    value: "e",
+    title: "What types of motor insurance are available in Kenya?",
+    text: "Motor insurance options include Third-Party Only (TPO), Comprehensive cover, and COMESA cover.",
+  },
+  {
+    value: "f",
+    title: "Is motor insurance mandatory in Kenya?",
+    text: "Yes. By law, all motor vehicles must at least have Third-Party Only (TPO) insurance.",
+  },
+  {
+    value: "g",
+    title: "What does medical insurance cover?",
+    text: "Medical insurance may cover inpatient, outpatient, dental, optical, maternity services, and medical evacuation depending on the policy.",
+  },
+  {
+    value: "h",
+    title: "What is a waiting period in medical insurance?",
+    text: "A waiting period is the time after policy activation during which certain benefits—such as maternity, pre-existing, congenital, or chronic conditions—cannot be claimed.",
+  },
+  {
+    value: "i",
+    title: "Are pre-existing conditions covered?",
+    text: "Yes, pre-existing conditions may be covered subject to waiting periods. Corporate and SME covers often have no waiting periods.",
+  },
+  {
+    value: "j",
+    title: "What types of life insurance covers are available?",
+    text: "Life insurance options include term life, whole life, education/endowment plans, and investment-linked policies.",
+  },
+  {
+    value: "k",
+    title: "Can I cancel my life insurance policy?",
+    text: "Yes. Cancelling before 3 years results in loss of all contributions. After 36 months, you may receive a surrender value, which is lower than the total premiums paid.",
+  },
+  {
+    value: "l",
+    title: "What does home or property insurance cover?",
+    text: "Home insurance covers building damage, household contents, theft, fire, floods, and personal liability.",
+  },
+  {
+    value: "m",
+    title: "What types of business insurance are available?",
+    text: "Common business covers include fire, burglary, WIBA, employer liability, professional indemnity, cyber risk insurance, goods in transit, carriers liability, and all-risks insurance.",
+  },
+  {
+    value: "n",
+    title: "What does travel insurance cover?",
+    text: "Travel insurance covers medical emergencies, lost baggage, trip delays, and flight accidents. It is often required for visa applications.",
+  },
+  {
+    value: "o",
+    title: "Why might an insurance claim be delayed or rejected?",
+    text: "Claims may be delayed due to missing documentation. Claims may be declined if they are fraudulent or below the payable excess amount.",
+  },
+  {
+    value: "p",
+    title: "What can void a motor vehicle insurance claim?",
+    text: "Motor claims can be voided due to drunk driving, use of an unlicensed driver, fraud or misrepresentation, delayed reporting, unauthorized vehicle use, or driving without a valid or provisional license.",
   },
 ];
 
@@ -195,7 +255,7 @@ export type Service = {
   slug: string;
   title: string;
   description: string;
-  includes: string[] | null;
+  includes: string[];
   icon: any;
   image: string | null;
 };
@@ -211,7 +271,7 @@ export const services: Service[] = [
     includes: ["Individual Medical Cover", "Group Medical Cover"],
   },
   {
-    image: "/images/.jpeg",
+    image: "/images/car.jpeg",
     slug: "motor-vehicle-insurance",
     icon: FaCar,
     title: "Motor Vehicle Insurance",
@@ -226,7 +286,10 @@ export const services: Service[] = [
     title: "WIBA & Employers' Liability",
     description:
       "Ensure the safety and well-being of your workforce with statutory and additional protections.",
-    includes: null,
+    includes: [
+      "Cover against employment-related liabilities",
+      "Comprehensive workplace protection",
+    ],
   },
   {
     image: "/images/business.jpeg",
@@ -256,7 +319,11 @@ export const services: Service[] = [
     icon: FaPiggyBank,
     title: "Pension Covers",
     description: "Our pension solutions ensure you retire with confidence.",
-    includes: null,
+    includes: [
+      "Personal Pension Plans",
+      "Corporate Pension Solutions",
+      "Retirement Savings",
+    ],
   },
   {
     image: "/images/contractors.jpeg",
@@ -264,6 +331,10 @@ export const services: Service[] = [
     icon: FaHardHat,
     title: "Contractors' All Risks",
     description: "Secure your construction projects from start to finish.",
-    includes: null,
+    includes: [
+      "Contract Works Coverage",
+      "Machinery & Materials",
+      "Site Liabilities & Employee Protection",
+    ],
   },
 ];

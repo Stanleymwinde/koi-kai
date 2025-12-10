@@ -7,62 +7,50 @@ const Hero: React.FC = () => {
     <Box
       position="relative"
       w="100%"
-      h={{ base: "70vh", sm: "80vh", md: "100vh" }}
+      minH={{ base: "60vh", md: "100vh" }}
       overflow="hidden"
-      mt={{ base: 0, md: 14 }}
+      mt={{ base: 0, md: 18 }}
     >
       {/* Background Image */}
       <Box
         position="absolute"
-        top={0}
-        left={0}
-        w="100%"
-        h="100%"
+        inset={0}
         bgImage="url('/images/risk.jpeg')"
         bgSize="cover"
-        bgPos="center"
+        backgroundPosition={{ base: "top center", md: "center" }}
         zIndex={0}
       />
 
       {/* Overlay */}
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        w="100%"
-        h="100%"
-        bg="rgba(0,0,0,0.45)"
-        zIndex={1}
-      />
+      <Box position="absolute" inset={0} bg="rgba(0,0,0,0.45)" zIndex={1} />
 
       {/* Hero Content */}
       <VStack
+        mt={4}
         position="relative"
         zIndex={2}
-        h="100%"
-        justify={{ base: "flex-end", sm: "center", md: "center" }}
-        align="flex-start"
-        gap={{ base: 3, md: 4 }}
-        textAlign="left"
+        minH="100%"
+        justify={{ base: "flex-start", md: "center" }} // ✅ key fix
+        align="center"
         px={{ base: 4, sm: 6, md: 12 }}
-        pb={{ base: 12, sm: 0 }}
+        pt={{ base: "38vh", sm: "34vh", md: 0 }} // ✅ pushes text DOWN on mobile
+        gap={{ base: 4, md: 6 }}
         color="white"
         fontFamily="Poppins"
         maxW={{ base: "100%", md: "60%" }}
       >
         <Heading
           fontSize={{ base: "2xl", sm: "3xl", md: "5xl", lg: "6xl" }}
-          fontWeight="bold"
-          color="#FFFFFF"
-          textAlign="center"
-          fontFamily="poppins"
+          lineHeight={{ base: "1.35", md: "1.15" }}
+          maxW="640px"
         >
           Protecting What Matters Most
         </Heading>
 
         <Text
           fontSize={{ base: "md", sm: "lg", md: "xl" }}
-          maxW={{ base: "100%", md: "520px" }}
+          maxW="520px"
+          opacity={0.95}
         >
           From health to business assets, we provide comprehensive and reliable
           insurance solutions tailored to your needs.
@@ -71,21 +59,21 @@ const Hero: React.FC = () => {
         {/* Buttons */}
         <HStack
           gap={4}
-          mt={4}
           flexDirection={{ base: "column", sm: "row" }}
           w={{ base: "full", sm: "auto" }}
+          pt={{ base: 2, md: 4 }}
         >
           <Button
             bg="#e60000ff"
             color="white"
-            _hover={{ bg: "#000000ff" }}
             w={{ base: "full", sm: "auto" }}
             size={{ base: "md", sm: "lg" }}
-            py={{ base: 2, sm: 4 }}
-            onClick={() => {
-              const section = document.getElementById("services");
-              if (section) section.scrollIntoView({ behavior: "smooth" });
-            }}
+            py={4}
+            onClick={() =>
+              document
+                .getElementById("services")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Our Services
           </Button>
@@ -96,11 +84,12 @@ const Hero: React.FC = () => {
             border="1px solid #ffffff"
             w={{ base: "full", sm: "auto" }}
             size={{ base: "md", sm: "lg" }}
-            py={{ base: 2, sm: 4 }}
-            onClick={() => {
-              const section = document.getElementById("contact");
-              if (section) section.scrollIntoView({ behavior: "smooth" });
-            }}
+            py={4}
+            onClick={() =>
+              document
+                .getElementById("contact")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Talk to an Advisor
           </Button>

@@ -7,129 +7,108 @@ const HeroSection: React.FC = () => {
     <Box
       position="relative"
       w="100%"
-      h={{ base: "60vh", sm: "75vh", md: "100vh" }}
+      minH={{ base: "85vh", sm: "90vh", md: "100vh" }}
       overflow="hidden"
     >
       {/* Background Image */}
       <Box
         position="absolute"
-        top={0}
-        left={0}
-        w="100%"
-        h="100%"
+        inset={0}
         bgImage="url('/images/about1-bg.jpeg')"
         bgSize="cover"
-        bgPos="center"
+        // style={{
+        //   backgroundPosition:{{ base: "top center", md: "center" }}
+        //  }}
+        backgroundPosition={{ base: "top center", md: "center" }} // ✅ prevents top cut
         zIndex={0}
       />
 
-      {/* Black Overlay */}
-      <Box
-        position="absolute"
-        top={0}
-        left={0}
-        w="100%"
-        h="100%"
-        bg="rgba(2, 2, 2, 0.35)"
-        zIndex={1}
-      />
-      {/* Hero Content */}
+      {/* Overlay */}
+      <Box position="absolute" inset={0} bg="rgba(2, 2, 2, 0.45)" zIndex={1} />
+
+      {/* Content */}
       <VStack
         position="relative"
         zIndex={2}
-        h="100%"
-        justify={{ base: "flex-end", sm: "center", md: "center" }} // push down on mobile
+        minH="100%"
+        justify="center" // ✅ avoids overlap
         align="center"
-        gap={{ base: 3, md: 4 }}
         textAlign="center"
-        px={{ base: 4, sm: 6, md: 8 }}
-        pb={{ base: 10, sm: 0 }} // extra bottom padding for mobile
+        px={{ base: 4, sm: 6, md: 10 }}
         color="white"
         fontFamily="Poppins"
+        gap={{ base: 4, md: 6 }}
       >
         <Heading
+          maxW="900px" // ✅ prevents text stretch
           fontSize={{ base: "xl", sm: "2xl", md: "5xl", lg: "6xl" }}
-          fontWeight="bold"
-          textAlign="center"
-          color="#FFFFFF"
-          letterSpacing="tight"
-          lineHeight="shorter"
-          textShadow="0 2px 8px rgba(0, 0, 0, 0.5)"
-          mb={4}
+          lineHeight={{ base: "1.3", md: "1.15" }} // ✅ mobile-safe
+          textShadow="0 2px 8px rgba(0,0,0,0.6)"
         >
           About KAI Insurance Agency
         </Heading>
 
         <Text
+          maxW="650px"
           fontSize={{ base: "sm", sm: "md", md: "xl" }}
-          maxW={{ base: "90%", md: "600px" }}
           lineHeight="tall"
-          mb={4}
-          textShadow="0 1px 4px rgba(0, 0, 0, 0.4)"
           opacity={0.95}
+          textShadow="0 1px 4px rgba(0,0,0,0.4)"
         >
           Dedicated to educating and empowering our clients with knowledge on
-          insurance matters while offering solutions for all
+          insurance matters while offering solutions for all.
         </Text>
 
-        {/* Buttons: stacked on mobile */}
+        {/* Buttons */}
         <HStack
           gap={4}
-          mt={2}
           flexDirection={{ base: "column", sm: "row" }}
           w={{ base: "full", sm: "auto" }}
+          pt={{ base: 2, md: 4 }}
         >
           <Button
-            color="black"
             w={{ base: "full", sm: "auto" }}
             bg="white"
-            _hover={{
-              bg: "#cc0000",
-              transform: "translateY(-2px)",
-              boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)",
-            }}
-            _active={{ transform: "translateY(0)" }}
+            color="black"
             size={{ base: "md", sm: "lg" }}
-            py={{ base: 3, sm: 4 }}
-            px={{ base: 6, sm: 8 }}
+            px={8}
+            py={4}
             borderRadius="lg"
             fontWeight="semibold"
-            letterSpacing="wide"
             transition="all 0.3s ease"
-            onClick={() => {
-              const section = document.getElementById("section2");
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
+            _hover={{
+              bg: "#cc0000",
+              color: "white",
+              transform: "translateY(-2px)",
             }}
-            background={"white"}
+            onClick={() =>
+              document
+                .getElementById("section2")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Meet Our Team
           </Button>
 
           <Button
-            color="white"
             w={{ base: "full", sm: "auto" }}
             bg="#e60000"
+            color="white"
+            size={{ base: "md", sm: "lg" }}
+            px={8}
+            py={4}
+            borderRadius="lg"
+            fontWeight="semibold"
+            transition="all 0.3s ease"
             _hover={{
               bg: "#cc0000",
               transform: "translateY(-2px)",
-              boxShadow: "0 8px 16px rgba(230, 0, 0, 0.3)",
             }}
-            _active={{ transform: "translateY(0)" }}
-            size={{ base: "md", sm: "lg" }}
-            py={{ base: 3, sm: 4 }}
-            px={{ base: 6, sm: 8 }}
-            borderRadius="lg"
-            fontWeight="semibold"
-            letterSpacing="wide"
-            transition="all 0.3s ease"
-            onClick={() => {
-              const section = document.getElementById("section3");
-              if (section) {
-                section.scrollIntoView({ behavior: "smooth" });
-              }
-            }}
+            onClick={() =>
+              document
+                .getElementById("section3")
+                ?.scrollIntoView({ behavior: "smooth" })
+            }
           >
             Learn More
           </Button>

@@ -1,6 +1,6 @@
 "use client";
 
-import { MarginX } from "@/utils/constants";
+import { MarginX, services } from "@/utils/constants";
 import {
   Box,
   Grid,
@@ -21,100 +21,6 @@ import { Heart, Car, Users, Briefcase, Shield, TrendingUp } from "lucide-react";
 import { useColorMode } from "../ui/color-mode";
 import { FaHelmetSafety } from "react-icons/fa6";
 import { info } from "console";
-
-const services = [
-  {
-    image: "/images/health.jpeg",
-    title: "Medical Insurance",
-    slug: "medical-insurance",
-    desc: "Corporate, individual, and SME medical covers tailored to your needs.",
-    icon: <Heart size={26} color="#1A365D" />,
-    items: [
-      "Corporate Medical Covers",
-      "Individual Medical Covers",
-      "SME Medical Covers",
-    ],
-  },
-  {
-    image: "/images/hero-bg2.jpeg",
-    title: "Marine Insurance",
-    slug: "marine-insurance",
-    desc: "Comprehensive marine insurance solutions for all your shipping needs.",
-    icon: <Shield size={26} color="#1A365D" />,
-    items: ["Cargo Insurance", "Hull Insurance", "Liability Insurance"],
-  },
-  {
-    image: "/images/car.jpeg",
-    title: "Motor Vehicle Insurance",
-    slug: "motor-vehicle-insurance",
-    desc: "Comprehensive coverage for all types of vehicles.",
-    icon: <Car size={26} color="#1A365D" />,
-    items: [
-      "Motor Private Insurance",
-      "Motor Commercial Insurance",
-      "Special Types (Plant Machinery)",
-    ],
-  },
-  {
-    image: "/images/wiba.jpeg",
-    title: "W.I.B.A & E.L Covers",
-    slug: "wiba-employers-liability",
-    desc: "Work Injury Benefits Act and Employer's Liability protection.",
-    icon: <Users size={26} color="#1A365D" />,
-    items: [
-      "Cover against employment-related liabilities",
-      "Comprehensive workplace protection",
-    ],
-  },
-  {
-    image: "/images/business.jpeg",
-    title: "Business/Asset Insurance",
-    slug: "business-asset-insurance",
-    desc: "Protect your business assets and operations.",
-    icon: <Briefcase size={26} color="#1A365D" />,
-    items: [
-      "SME / Enterprise Covers",
-      "Commercial Property Covers",
-      "Office & Equipment Covers",
-    ],
-  },
-  {
-    image: "/images/new-life.jpeg",
-    title: "Life Insurance",
-    slug: "life-insurance",
-    desc: "Secure your family's future with comprehensive life coverage.",
-    icon: <Shield size={26} color="#1A365D" />,
-    items: [
-      "Term Life Insurance",
-      "Education Policies",
-      "Long-term Savings Plans",
-    ],
-  },
-  {
-    image: "/images/pension.jpeg",
-    title: "Pension Covers",
-    slug: "pension-covers",
-    desc: "Plan for a secure retirement with our pension solutions.",
-    icon: <TrendingUp size={26} color="#1A365D" />,
-    items: [
-      "Personal Pension Plans",
-      "Corporate Pension Solutions",
-      "Retirement Savings",
-    ],
-  },
-  {
-    image: "/images/contractors.jpeg",
-    title: "Contractor All Risks",
-    slug: "contractors-all-risks",
-    desc: "Comprehensive coverage for construction projects and contract works.",
-    icon: <FaHelmetSafety size={26} color="#1A365D" />,
-    items: [
-      "Contract Works Coverage",
-      "Machinery & Materials",
-      "Site Liabilities & Employee Protection",
-    ],
-  },
-];
 
 const Services = () => {
   const { toggleColorMode, colorMode } = useColorMode();
@@ -198,11 +104,11 @@ const Services = () => {
                   </Heading>
 
                   <Text fontSize="lg" opacity={0.8}>
-                    {srv.desc}
+                    {srv.description}
                   </Text>
 
                   <Box as="ol" gap={1}>
-                    {srv.items.map((item, idx) => (
+                    {srv.includes.map((item, idx) => (
                       <Box key={idx} display="flex" alignItems="center" gap={2}>
                         <CheckCircle color="green.300" />
                         <Text fontSize="lg" lineHeight="tall">

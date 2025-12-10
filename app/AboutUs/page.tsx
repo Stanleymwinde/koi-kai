@@ -9,13 +9,13 @@ import { CTAsection } from "@/components/Services";
 
 export default function AboutPage() {
   return (
-    <main>
+    <>
       <HeroSection />
       <MissionVisionSection />
       <CoreValues />
       <Kui />
       <Teamsection />
       <CTAsection />
-    </main>
+    </>
   );
 }
