@@ -1,7 +1,16 @@
-import React from "react";
+import { HeroS, Ctact, Faqs, LocationSection } from "@/components/Contact";
+import { CTAsection } from "@/components/Services";
 
-const page = () => {
-  return <div>page</div>;
-};
-
-export default page;
+export default function AboutPage() {
+  return (
+    <main>
+      <HeroS />
+        <Ctact />
+        <Faqs />
+        <LocationSection />
+        <CTAsection />
+    
+      
+    </main>
+  );
+}

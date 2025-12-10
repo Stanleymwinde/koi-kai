@@ -23,7 +23,7 @@ const MainNav = () => {
   return (
     <Flex
       h={NAV_HEIGHT}
-      px={{ base: 4, md: 10 }}
+      px={{ base: 4, md: 8 }}
       align="center"
       justify="space-between"
       position="fixed"

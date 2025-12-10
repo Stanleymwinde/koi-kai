@@ -36,7 +36,7 @@ export default function RootLayout({
         <Provider>
           <NextTopLoader color="red" />
           <Navigation />
-          <Box h={{ base: "40px", md: "50px" }} />
+          <Box h={{ base: "40px" }} />
 
           {children}
           <WhatsApp />

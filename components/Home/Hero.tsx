@@ -58,7 +58,7 @@ const HeroSwiper = () => {
   };
 
   return (
-    <Box position="relative" id="home" pt={{ base: 24, md: "90px" }}>
+    <Box position="relative" id="home" pt={{ base: 24, md: "40px" }}>
       <Swiper
         spaceBetween={0}
         centeredSlides={true}

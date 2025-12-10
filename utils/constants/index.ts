@@ -31,8 +31,8 @@ export const navItems = [
     href: "/Services",
   },
   {
-    label: "Contact",
-    href: "/Contact",
+    label: "Contact Us",
+    href: "/contact-us",
   },
 ];
 
