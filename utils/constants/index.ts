@@ -251,14 +251,21 @@ export const FaqsData = [
   },
 ];
 
-export type Service = {
+export interface ServiceDetail {
+  name: string;
+  valueProposition: string;
+  importance: string;
+}
+
+export interface Service {
+  image: string;
   slug: string;
+  icon: any;
   title: string;
   description: string;
   includes: string[];
-  icon: any;
-  image: string | null;
-};
+  details?: ServiceDetail[];
+}
 
 export const services: Service[] = [
   {
@@ -267,74 +274,193 @@ export const services: Service[] = [
     icon: FaHeart,
     title: "Medical Insurance",
     description:
-      "We offer flexible and comprehensive medical insurance plans that protect individuals, families, and organizations from unexpected healthcare costs.",
-    includes: ["Individual Medical Cover", "Group Medical Cover"],
+      "Provides access to reliable, quality healthcare through a wide hospital network.",
+    includes: [
+      "Individual Medical Cover",
+      "SME Medical Cover",
+      "Corporate / Group Medical Cover",
+    ],
+    details: [
+      {
+        name: "Medical Insurance",
+        valueProposition:
+          "Provides access to reliable quality healthcare within a broader hospital network.",
+        importance:
+          "Ensures timely treatment in better facilities and protects families and businesses from rising healthcare costs.",
+      },
+    ],
   },
+
   {
     image: "/images/car.jpeg",
     slug: "motor-vehicle-insurance",
     icon: FaCar,
     title: "Motor Vehicle Insurance",
     description:
-      "Whether for private or commercial use, our motor insurance plans safeguard your vehicle.",
-    includes: ["Private Motor", "Commercial Motor", "Special Motor Vehicles"],
-  },
-  {
-    image: "/images/hero-bg2.jpeg",
-    slug: "wiba-employers-liability",
-    icon: FaShieldAlt,
-    title: "WIBA & Employers' Liability",
-    description:
-      "Ensure the safety and well-being of your workforce with statutory and additional protections.",
-    includes: [
-      "Cover against employment-related liabilities",
-      "Comprehensive workplace protection",
+      "Safeguards your vehicle while ensuring legal compliance and asset protection.",
+    includes: ["Comprehensive Motor", "Third Party Only"],
+    details: [
+      {
+        name: "Comprehensive Motor Insurance",
+        valueProposition:
+          "Complete vehicle protection including own damage, theft, vandalism, and natural disasters.",
+        importance:
+          "Repairs are expensive and vehicles are major investments. This cover protects you from total financial loss.",
+      },
+      {
+        name: "Third Party Only",
+        valueProposition: "Legal compliance at the lowest cost.",
+        importance:
+          "Mandatory by law and protects you from crippling liability if you injure someone or damage their property.",
+      },
     ],
   },
+
+  {
+    image: "/images/new-life.jpeg",
+    slug: "life-insurance",
+    icon: FaUsers,
+    title: "Life Insurance",
+    description:
+      "Financial protection and long-term security for your family and dependents.",
+    includes: [
+      "Term Life Insurance",
+      "Whole Life Insurance",
+      "Education Policies",
+      "Endowment Policies",
+    ],
+    details: [
+      {
+        name: "Term Life Insurance",
+        valueProposition:
+          "Affordable protection for a fixed period (10–30 years).",
+        importance:
+          "Ensures your family maintains their lifestyle and meets obligations like school fees and mortgages if you pass away unexpectedly.",
+      },
+      {
+        name: "Whole Life Insurance",
+        valueProposition: "Lifetime coverage with cash value accumulation.",
+        importance:
+          "Plays a key role in legacy planning while offering lifelong protection.",
+      },
+      {
+        name: "Education Policy",
+        valueProposition:
+          "Guaranteed funds for children’s education regardless of death, disability, or critical illness.",
+        importance:
+          "Ensures children’s education is never disrupted if the breadwinner is affected.",
+      },
+      {
+        name: "Endowment Policy",
+        valueProposition: "Disciplined savings combined with life cover.",
+        importance:
+          "Helps achieve goals like buying land or starting a business while maintaining life protection.",
+      },
+    ],
+  },
+
   {
     image: "/images/business.jpeg",
     slug: "business-asset-insurance",
     icon: FaBuilding,
     title: "Business & Asset Insurance",
     description:
-      "Protect your business assets, property, and operations from risks.",
+      "Protects businesses, assets, and operations from financial shocks.",
     includes: [
-      "Fire & Special Perils",
-      "Burglary",
-      "All Risks",
+      "Fire & Burglary",
       "Public Liability",
+      "Professional Indemnity",
+      "Goods in Transit",
+      "Political Violence & Terrorism",
+    ],
+    details: [
+      {
+        name: "Fire & Burglary Insurance",
+        valueProposition: "Protection against fire damage and theft.",
+        importance:
+          "Fire and theft are common in Kenya and can destroy businesses and homes overnight.",
+      },
+      {
+        name: "Public Liability",
+        valueProposition:
+          "Covers claims from customers or the public injured on your premises.",
+        importance:
+          "Protects business owners from lawsuits, especially for shops, restaurants, and offices.",
+      },
+      {
+        name: "Professional Indemnity",
+        valueProposition:
+          "Covers claims arising from professional negligence or errors.",
+        importance: "Protects professionals from costly malpractice claims.",
+      },
+      {
+        name: "Goods in Transit",
+        valueProposition: "Covers goods while being transported.",
+        importance:
+          "Protects traders from losses due to road accidents and theft.",
+      },
+      {
+        name: "Political Violence & Terrorism",
+        valueProposition:
+          "Covers loss or damage from riots, strikes, and terrorism.",
+        importance:
+          "Standard policies exclude these risks, yet they are real in Kenya.",
+      },
     ],
   },
-  {
-    image: "/images/new-life.jpeg",
-    slug: "life-insurance",
-    icon: FaUsers,
-    title: "Life Insurance",
-    description: "Preserve your family's future with life insurance solutions.",
-    includes: ["Whole Life Cover", "Education Plans", "Family Protection"],
-  },
-  {
-    image: "/images/pension.jpeg",
-    slug: "pension-covers",
-    icon: FaPiggyBank,
-    title: "Pension Covers",
-    description: "Our pension solutions ensure you retire with confidence.",
-    includes: [
-      "Personal Pension Plans",
-      "Corporate Pension Solutions",
-      "Retirement Savings",
-    ],
-  },
+
   {
     image: "/images/contractors.jpeg",
     slug: "contractors-all-risks",
     icon: FaHardHat,
     title: "Contractors' All Risks",
-    description: "Secure your construction projects from start to finish.",
+    description: "End-to-end protection for construction projects.",
+    includes: ["Contract Works", "Materials & Machinery", "Site Liabilities"],
+    details: [
+      {
+        name: "Contractors’ All Risk",
+        valueProposition:
+          "Covers construction projects against all risks during the build phase.",
+        importance:
+          "Construction is high-risk; this cover protects developers and contractors from accidents, theft, and natural disasters.",
+      },
+    ],
+  },
+
+  {
+    image: "/images/pension.jpeg",
+    slug: "pension-covers",
+    icon: FaPiggyBank,
+    title: "Pension Covers",
+    description:
+      "Retirement planning solutions for individuals and organizations.",
     includes: [
-      "Contract Works Coverage",
-      "Machinery & Materials",
-      "Site Liabilities & Employee Protection",
+      "Individual Pension Plans (IPP)",
+      "Umbrella Pension Schemes",
+      "Provident Funds",
+      "Annuities",
+      "NSSF Tier II Contracting Out",
+    ],
+    details: [
+      {
+        name: "Individual Pension Plans (IPP)",
+        valueProposition:
+          "Tailored retirement savings for self-employed and contract workers.",
+        importance: "Ensures retirement security outside occupational schemes.",
+      },
+      {
+        name: "Umbrella Pension Schemes",
+        valueProposition: "Pooled retirement schemes for multiple employers.",
+        importance:
+          "Cost-effective and professionally managed pension solution for SMEs.",
+      },
+      {
+        name: "NSSF Tier II Contracting Out",
+        valueProposition:
+          "Potentially higher returns through private fund management.",
+        importance:
+          "Offers better governance, transparency, and professional investment management.",
+      },
     ],
   },
 ];
